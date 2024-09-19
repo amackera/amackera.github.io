@@ -25,4 +25,4 @@ on Canada's best coast.
 Over the last 25+ years, I've shipped code in almost a dozen
 programming languages, worked with some truly exceptional people,
 built software that's been downloaded billions of times, and had a
-absolute blast.
+absolute blast solving hard problems.
