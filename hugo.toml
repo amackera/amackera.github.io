@@ -40,6 +40,10 @@ url = "/"
 name = "posts"
 url = "/posts"
 
+[[params.menu]]
+name = "photos"
+url = "/photos"
+
 # Syntax highligth on code blocks
 [markup]
 [markup.highlight]

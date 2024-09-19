@@ -1,0 +1,21 @@
+---
+date: 2024-09-18
+---
+![VW Bug](DSCF0928.png "VW Bug")
+![Ruins](DSCF1059.png "Ruins")
+![Statue](DSCF1113.png "Statue")
+![Cup and Saucer](IMG_1365.png "Cup and Saucer")
+![Cookies](IMG_1452.png "Cookies")
+![Birds](IMG_2013.png "Birds")
+![Cat](IMG_2502.png "Cat")
+![Coast](IMG_2808.png "Coast")
+![Post](IMG_2829.png "Post")
+![Purr](IMG_4710.png "Purr")
+![Stump](IMG_5042.png "Stump")
+![Bridge](IMG_5381.png "Bridge")
+![Sails](IMG_5954.png "Sails")
+![Kayak](IMG_6170.png "Kayak")
+![Walls](IMG_6175.png "Walls")
+![Waves](IMG_6317.png "Waves")
+![Sky](IMG_6437.png "Sky")
+![Mountain](IMG_6445.png "Mountain")
