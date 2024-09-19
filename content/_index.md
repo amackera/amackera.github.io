@@ -14,7 +14,7 @@ Hat](https://tophat.com).
 My expertise lies in developing reliable software services deployed at
 scale via cloud infrastructure. This includes deployments of
 transactional systems, "real-time" web systems, online ML models,
-high-scale batch processing, and most recently [re-entrant
+high-scale batch processing, and most recently [reentrant
 processes](https://www.wikiwand.com/en/articles/Reentrancy_(computing)),
 and durable execution.
 
