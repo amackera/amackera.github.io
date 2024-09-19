@@ -74,7 +74,7 @@ __Software Developer__, Jan 2010 - Aug 2010
 
 __Applied Science, Computer Engineering__, 2005 - 2010
 
-- Wrote a real-time OS: [RAWKOS](https://github.com/amackera/rawkos)
+- Wrote a real-time OS: [`rawkos`](https://github.com/amackera/rawkos)
 - Programming languages, data structures, algorithms, databases
 - VLSI (Verilog and VHDL), PLC programming, FPGA prototyping
 - Volunteered and learned a bunch at the ASIC Design Team
