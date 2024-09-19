@@ -25,7 +25,7 @@ url = "https://github.com/amackera"
 
 [[params.social]]
 name = "HN"
-url = "https://news.ycombinator.com/amackera"
+url = "https://news.ycombinator.com/user?id=amackera"
 
 [[params.social]]
 name = "Email"
