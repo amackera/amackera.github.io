@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Anson MacKeracher</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Anson MacKeracher</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inspire GPT</title>
+      <link>http://localhost:1313/posts/go-inspire-gpt/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/go-inspire-gpt/</guid>
+      <description>&lt;p&gt;ChatGPT has people very excited. Academics are imagining their hard-wrought papers being generated with a simple prompt. Programmers are watching machines begin to write their own code. Writers and creatives are staring at the results of a ChatGPT prompt with amazement, delight, and terror.&lt;/p&gt;&#xA;&lt;p&gt;AI has arrived. Not the way that Hollywood said it would, but in the way that all magnificent human inventions happen: gradually, over time, with the participation of countless individuals. We did it. We can&amp;rsquo;t put the genie back in the bottle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

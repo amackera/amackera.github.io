@@ -1,0 +1,46 @@
+baseURL = 'https://mackeracher.com/'
+languageCode = 'en-us'
+title = 'Anson MacKeracher'
+theme = "typo"
+
+[params]
+description = "Personal webpage of Anson MacKeracher"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/amackera"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/amackera"
+
+[[params.social]]
+name = "HN"
+url = "https://news.ycombinator.com/amackera"
+
+[[params.social]]
+name = "Email"
+url = "mailto:anson@mackeracher.com"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
