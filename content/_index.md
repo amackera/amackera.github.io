@@ -18,9 +18,9 @@ high-scale batch processing, and most recently [re-entrant
 processes](https://www.wikiwand.com/en/articles/Reentrancy_(computing)),
 and durable execution.
 
-I graduated from University of Waterloo Electrical and Computer
-Engineering way back in 2010, but I've since relocated to Vancouver on
-Canada's best coast.
+I graduated from the University of Waterloo, Electrical and Computer
+Engineering, way back in 2010, but I've since relocated to Vancouver
+on Canada's best coast.
 
 Over the last 25+ years, I've shipped code in almost a dozen
 programming languages, worked with some truly exceptional people,
