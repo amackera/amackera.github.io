@@ -84,7 +84,7 @@ __Applied Science, Computer Engineering__, 2005 - 2010
 
 ### Internships & Co-ops
 
-- Xandros
-- Broadcom
-- Cisco
-- AECL
+- Xandros, Ottawa
+- Broadcom, San Jose
+- Cisco, Ottawa
+- AECL, Mississauga
