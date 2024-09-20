@@ -15,6 +15,7 @@ hideHeader = false
 breadcrumbs = false
 
 faviconPath= "/hi"
+paginationSize = 20
 
 # Google analytics code
 [services]
