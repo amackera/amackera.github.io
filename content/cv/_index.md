@@ -5,17 +5,20 @@ title: "CV"
 
 ## Experience
 
-### LegalMate
+### [LegalMate](https://legalmate.co)
+
+_Reliable data management and workflow automation for legal professionals across the USA and Canada_
 
 ___Co-Founder & CTO___, Nov 2020 - Sep 2024
 
 - Developed the world's first purpose-built durable legal automation platform
-- Reliable data management and workflow automation for legal professionals across the USA and Canada
 - Oversaw all technology strategy, design, development, and deployment
 - Implemented reentrant processes and durable execution for high reliability
 - Python, JavaScript, Clojure, Temporal, PostgreSQL
 
-### Ada
+### [Ada](https://ada.cx)
+
+_AI-powered customer service automation platform_
 
 ___Head of Engineering___, Dec 2017 - Sep 2020
 
@@ -34,12 +37,15 @@ ___Development Lead___, Jan 2017 - Dec 2017
 
 ### Deeptree
 
+_Startup lab focused on developer tools_
+
 ___Co-Founder___, Feb 2016 - Feb 2017
 
-- Startup lab focused on developer tools
 - Python, Node.js
 
 ### Tilt
+
+_The world's fastest and simplest group payments financial platform_
 
 __Engineering Lead__, Mar 2015 - Feb 2016
 
@@ -48,7 +54,9 @@ __Engineering Lead__, Mar 2015 - Feb 2016
 - Launched in 9 countries across the world
 - Perl, JavaScript, Node.js
 
-### Top Hat
+### [Top Hat](https://tophat.com)
+
+_Education technology platform for classroom engagement and content management_
 
 __Chief Architect__, May 2013 - Mar 2015
 
