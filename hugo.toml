@@ -14,7 +14,7 @@ hideHeader = false
 # Breadcrumbs
 breadcrumbs = false
 
-faviconPath= "/hi"
+faviconPath= "https://mackeracher.com"
 paginationSize = 20
 
 # Google analytics code
