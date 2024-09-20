@@ -9,7 +9,7 @@ Of course, like all things in life, there's a trade-off. A fast pace means high 
 
 Most of the time, all we hear about are the success stories. This survivor bias has created a skewed perspective on being early-stage employee in the public eye. I have thoughts, and this post is my attempt to explain the reality of what it's like.
 
-## The Rocket ship Metaphor
+## The Rocket Ship Metaphor
 
 Startups are often compared to "rocket ships": once they "launch", they "accelerate" into "the cloud" (ha ha). I think this metaphor is apt. Rocket ships aren't very impressive on the ground before they launch. They're filled with fuel and are known to explode everywhere and hurt people. Once they get off the ground they produce an enormous amount of smoke and noise, at first it's hard to determine if they're making any progress at all, and the vibrations throughout the frame will cause the crew to feel like they're being shaken apart. They leave some scorched earth behind them in their wake. Once they make it into space, they're untouchable and don't easily return to earth.
 
