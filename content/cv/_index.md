@@ -28,7 +28,7 @@ ___Head of Engineering___, Dec 2017 - Sep 2020
 
 ___Development Lead___, Jan 2017 - Dec 2017
 
-- Lead technical design, development, and operations of Ada's technology
+- Led technical design, development, and operations of Ada's technology
 - Contributed directly to platform, application, and infrastructure code
 - Coordinated engineering team's efforts and goals
 
@@ -36,8 +36,8 @@ ___Development Lead___, Jan 2017 - Dec 2017
 
 ___Co-Founder___, Feb 2016 - Feb 2017
 
-- Startup lab focussed on developer tools
-- Python, Node.JS
+- Startup lab focused on developer tools
+- Python, Node.js
 
 ### Tilt
 
@@ -46,7 +46,7 @@ __Engineering Lead__, Mar 2015 - Feb 2016
 - Led engineering for internationalization and localization of apps and services
 - Automated string translation process into development tools
 - Launched in 9 countries across the world
-- Perl, JavaScript, Node.JS
+- Perl, JavaScript, Node.js
 
 ### Top Hat
 
