@@ -12,7 +12,7 @@ ___Co-Founder & CTO___, Nov 2020 - Sep 2024
 - Reliable data management and workflow automation for legal professionals across the USA and Canada
 - Oversaw all technology strategy, design, development, and deployment
 - Implemented reentrant processes and durable execution for high reliability
-- Python JavaScript, Clojure, Temporal, PostgreSQL
+- Python, JavaScript, Clojure, Temporal, PostgreSQL
 
 ### Ada
 
