@@ -12,7 +12,7 @@ colorPalette = 'default'
 hideHeader = false
 
 # Breadcrumbs
-breadcrumbs = true
+breadcrumbs = false
 
 # Social icons
 [[params.social]]

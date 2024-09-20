@@ -1,5 +1,6 @@
 ---
 date: 2024-09-18
+title: "Anson MacKeracher"
 ---
 
 I am a software creator with experience building systems that operate

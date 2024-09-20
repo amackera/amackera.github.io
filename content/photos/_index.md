@@ -1,5 +1,6 @@
 ---
 date: 2024-09-18
+title: "Photos"
 ---
 ![VW Bug](DSCF0928.png#full "VW Bug")
 ![Ruins](DSCF1059.png#full "Ruins")

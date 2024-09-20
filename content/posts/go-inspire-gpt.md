@@ -1,8 +1,8 @@
-+++
-title = 'Inspire GPT'
-date = 2023-02-28
-draft = false
-+++
+---
+title: "Inspire GPT"
+date: 2023-02-28
+draft: false
+---
 
 ChatGPT has people very excited. Academics are imagining their hard-wrought papers being generated with a simple prompt. Programmers are watching machines begin to write their own code. Writers and creatives are staring at the results of a ChatGPT prompt with amazement, delight, and terror.
 
