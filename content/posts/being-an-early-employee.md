@@ -43,7 +43,7 @@ I've made this mistake and confused my arrogance for wisdom. I presumed that pas
 
 ## When to Quit
 
-The rocket ship ride is incredible, if you make it to space. Hold on for dear life, and if you're lucky it'll be the best thing you could do for your career, your confidence, and your financial situation. If you let go even for a minute, or if your rocket is destined to explode due to some design flaw or just plain bad luck, it's going to be painful. But at least you can rebuilt the rocket and not make that same mistake.
+The rocket ship ride is incredible, if you make it to space. Hold on for dear life, and if you're lucky it'll be the best thing you could do for your career, your confidence, and your financial situation. If you let go even for a minute, or if your rocket is destined to explode due to some design flaw or just plain bad luck, it's going to be painful. But at least you can rebuild the rocket and not make that same mistake.
 
 As you scale yourself and your startup grows, you must become better at evaluating performance and making hard decisions. That means firing people (even your friends) when they aren't working out. Ultimately, that means managing *yourself* out when you no longer have gas in the tank. Don't expect your company or your founders to give you anything you haven't earned, just out of a sense of loyalty. As previously discussed, loyalty is dead and you've already been compensated for your work.
 
