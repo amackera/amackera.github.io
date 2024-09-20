@@ -14,6 +14,9 @@ hideHeader = false
 # Breadcrumbs
 breadcrumbs = false
 
+# Google analytics code
+googleAnalytics = "G-PZQVLV2HE8"
+
 # Social icons
 [[params.social]]
 name = "linkedin"
