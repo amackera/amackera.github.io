@@ -15,7 +15,9 @@ hideHeader = false
 breadcrumbs = false
 
 # Google analytics code
-googleAnalytics = "G-PZQVLV2HE8"
+[services]
+  [services.googleAnalytics]
+    ID = 'G-PZQVLV2HE8'
 
 # Social icons
 [[params.social]]
