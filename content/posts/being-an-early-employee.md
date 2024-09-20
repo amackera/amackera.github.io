@@ -15,7 +15,7 @@ Startups are often compared to "rocket ships": once they "launch", they "acceler
 
 Don't let the recent successes of SpaceX bias you: the vast majority of the time, the rocket explodes. Like 99% of all rockets ever launched blew up. Also a boatload of rockets that were supposed to launch never even made it to engine ignition.
 
-Rocket ships are scary but they are *risky*. Do not enter the blast radius unless you are prepared to get exploded. This applies to rockets and to startups.
+Rocket ships are *amazing* but they are *risky*. Do not enter the blast radius unless you are prepared to get exploded. This applies to rockets and to startups.
 
 ## Scaling Yourself
 
