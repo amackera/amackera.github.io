@@ -50,3 +50,7 @@ As you scale yourself and your startup grows, you must become better at evaluati
 In my experience, when you start getting feedback that makes you feel defensive and powerless, that's usually a good sign that you're failing to scale yourself. Feedback is a gift, and if you defend yourself, explain yourself, excuse yourself, or rationalize your behaviour, you're rejecting this gift. This pattern of behaviour is self-destructive, and if you dig your heels in you'll find yourself out of a job.
 
 Sometimes there is no path to improving or scaling yourself in response to feedback. If you feel stuck and frustrated after a few feedback sessions, it might be time to consider firing yourself, on your own terms. Find a soft landing. Take some time off. Remember that any resistance to change is resisting growth, and without growth a startup is dead. There's no shame in managing yourself out. Do it before it gets done to you.
+
+## Final Thoughts
+
+If you're an early employee struggling with any of this, if this post resonated with you in any way, or if you feel alone for whatever reason, please reach out to me at anson@mackeracher.com. You're not alone in this journey.
