@@ -79,6 +79,7 @@ __Applied Science, Computer Engineering__, 2005 - 2010
 - VLSI (Verilog and VHDL), PLC programming, FPGA prototyping
 - Volunteered and learned a so much at the ASIC Design Team
 - Engineering Jazz Band, Trumpet
+- University Choir, Tenor
 
 ### Internships & Co-ops
 
