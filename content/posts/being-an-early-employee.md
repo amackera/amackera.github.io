@@ -39,7 +39,7 @@ Failure brings humility. Success brings arrogance.
 
 As soon as you start believing your own bullshit, you're lying to yourself and everyone else. Stop it, or else.
 
-I've made this mistake by confused my arrogance with wisdom. I presumed that past success guarantees future success. It's brought me nothing but misery and hardship. This is an extremely hard lesson to learn.
+I've made this mistake and confused my arrogance for wisdom. I presumed that past success guarantees future success. It's brought me nothing but misery and hardship. This is an extremely hard lesson to learn. If you're not expecting it, it might break you entirely.
 
 ## When to Quit
 
