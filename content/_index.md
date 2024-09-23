@@ -21,7 +21,7 @@ and durable execution.
 
 I graduated from the University of Waterloo, Electrical and Computer
 Engineering, way back in 2010, but I've since relocated to Vancouver
-on Canada's best coast.
+on Canada's west coast.
 
 Over the last 25+ years, I've shipped code in almost a dozen
 programming languages, worked with some truly exceptional people,
