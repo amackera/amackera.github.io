@@ -5,6 +5,19 @@ title: "CV"
 
 ## Experience
 
+### [Mangrove Systems](https://mangrovesystems.com)
+
+_Comprehensive digital monitoring, reporting, and verification for carbon removal, industrial carbon capture, and low carbon fuels._
+
+___Head of Engineering___, Nov 2024 - Present
+
+- Leading a high performing team of Ruby and JavaScript developers
+- Responsible for security and compliance, including SOC2
+- Recruiting, performance management, strategy, and culture of engineering
+- IT operations and cloud infrastructure (Heroku, Azure, AWS)
+- Public API design and development, 3rd party integrations
+- Ruby on Rails, JavaScript, PostgreSQL
+
 ### [LegalMate](https://legalmate.co)
 
 _Reliable data management and workflow automation for legal professionals across the USA and Canada_
