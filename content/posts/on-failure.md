@@ -16,7 +16,7 @@ I get it. Things are scary, and failure hurts. Trying hard and not
 achieving your goal comes with crushing disappointment. But the key is
 to suffer through that and grow from it. That’s how you get
 better. Trying hard means _necessarily_ that you will fail. Failure is
-the yin to trying hard's yang. In the wise words of my father, "You
+the `yin` to trying hard's `yang`. In the wise words of my father, "You
 ain't skiing unless you're falling."
 
 We lie to ourselves all the time about how hard we tried. If you find
