@@ -31,5 +31,7 @@ best. Don’t be stupid. But also, don’t lie to yourself. Underneath
 these excuses is a simple emotion: fear. It almost goes without saying
 that facing your fears is the only way to grow.
 
-Are you ready for the hero's journey? Or do you want to stay in the
-Shire?
+Try hard. Revel in the failure, knowing you gave it your all. Failure
+doesn't mean you suck, _never_ failing means you suck. Nobody will
+push you harder than you can push yourself. You're stronger than you
+think.
