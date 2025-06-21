@@ -1,6 +1,6 @@
 ---
 title: "On failure"
-date: 2025-06-30
+date: 2025-06-21
 draft: false
 ---
 
