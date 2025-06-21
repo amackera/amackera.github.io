@@ -7,11 +7,10 @@ draft: false
 You can’t pick yourself up from failure if you never truly tried.
 
 We learn from failure. Real failure. Where you tried so hard, the
-hardest you could, and you **still** failed.
-
-If we half-ass something, and fail, we have an excuse: didn’t
-try. If we succeed, we reinforce that it’s acceptable to half-ass
-things. Either way we learn the wrong lesson.
+hardest you could, and you **still** failed. If we half-ass something,
+and fail, we have an excuse: didn’t try. If we succeed, we reinforce
+that it’s acceptable to half-ass things. Either way we learn the wrong
+lesson.
 
 I get it. Things are scary, and failure hurts. Trying hard and not
 achieving your goal comes with crushing disappointment. But the key is
