@@ -1,5 +1,5 @@
 ---
-title: "2025, year of the Linux Desktop
+title: "2025, year of the Linux Desktop"
 date: 2025-06-29
 draft: true
 ---
