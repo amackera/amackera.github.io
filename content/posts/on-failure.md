@@ -22,10 +22,9 @@ ain't skiing unless you're falling."
 
 We lie to ourselves all the time about how hard we tried. If you find
 yourself pointing to external validation (success, money, praise)
-that’s a red flag that you probably don’t try that hard.
-
-Real effort is its own validation. If you don’t know deep down that
-you gave it your all, then you probably didn’t.
+that’s a red flag that you probably don’t try that hard. Real effort
+is its own validation. If you don’t know deep down that you gave it
+your all, then you probably didn’t.
 
 We have endless excuses for why we didn’t try hard. Some of them are
 important: injury is a good excuse not to push for a personal
