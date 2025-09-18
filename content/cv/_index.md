@@ -9,9 +9,9 @@ title: "CV"
 
 _Comprehensive digital monitoring, reporting, and verification for carbon removal, industrial carbon capture, and low carbon fuels._
 
-___Head of Engineering___, Nov 2024 - Present
+___Head of Engineering___, Nov 2024 - Sep 2025
 
-- Leading a high performing team of Ruby and JavaScript developers
+- Led a high performing team of Ruby and JavaScript developers
 - Responsible for security and compliance, including SOC2
 - Recruiting, performance management, strategy, and culture of engineering
 - IT operations and cloud infrastructure (Heroku, Azure, AWS)
