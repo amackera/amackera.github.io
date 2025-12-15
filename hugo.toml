@@ -5,6 +5,8 @@ theme = "typo"
 
 [params]
 description = "Personal webpage of Anson MacKeracher"
+paginationSize = 20
+faviconPath = "https://mackeracher.com"
 
 # Appearance settings
 theme = 'auto'
@@ -12,10 +14,8 @@ colorPalette = 'default'
 hideHeader = false
 
 # Breadcrumbs
-breadcrumbs = false
-
-faviconPath= "https://mackeracher.com"
-paginationSize = 20
+[params.breadcrumbs]
+enabled = false
 
 # Google analytics code
 [services]
