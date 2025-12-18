@@ -3,7 +3,7 @@
   dir="ltr">
 
 <head>
-	<meta name="generator" content="Hugo 0.152.2">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
@@ -27,7 +27,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="https://mackeracher.com/android-chrome-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://mackeracher.com/apple-touch-icon.png">
 
-<link rel="alternate" type="application/rss+xml" href="https://mackeracher.com/index.xml" title="Anson MacKeracher">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Anson MacKeracher">
 <meta name="description" content="Personal webpage of Anson MacKeracher"/>
 
 
@@ -38,12 +38,12 @@
     
 </title>
 
-<link rel="canonical" href="https://mackeracher.com/"/>
+<link rel="canonical" href="http://localhost:1313/"/>
 
 <meta property="og:title" content="Anson MacKeracher">
 <meta property="og:description" content="Personal webpage of Anson MacKeracher">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://mackeracher.com/">
+<meta property="og:url" content="http://localhost:1313/">
 <meta property="og:site_name" content="Anson MacKeracher">
 
 
@@ -59,24 +59,6 @@
 
 
 <link rel="stylesheet" href="/assets/combined.min.56b1873d8852f8a5a109abda36c1bfcde55cb48e5bcbe0d8c934a196a7dc374a.css" media="all">
-
-
-
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZQVLV2HE8"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-PZQVLV2HE8');
-        }
-      </script>
 
 
 
@@ -112,7 +94,7 @@
     
 
     <h1 class="header-title">
-        <a href="https://mackeracher.com/">Anson MacKeracher</a>
+        <a href="http://localhost:1313/">Anson MacKeracher</a>
     </h1>
 
     <div class="header-menu">
@@ -239,85 +221,7 @@ worldwide.</p>
         
       </a>
     </div>
-
-  
-  <button id="chat-toggle" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #0084ff;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    transition: transform 0.2s;
-  " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-    💬
-  </button>
-
-  
-  <div id="chat-widget" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    height: 600px;
-    display: none;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 9999;
-    background: white;
-  ">
     
-    <button id="chat-close" style="
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: transparent;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 10000;
-      color: #666;
-    ">×</button>
-
-    
-    <iframe
-      src="http://localhost:4000/embed/chat/c4c-6569"
-      style="
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 10px;
-      "
-    ></iframe>
-  </div>
-
-  <script>
-    const toggleBtn = document.getElementById('chat-toggle');
-    const closeBtn = document.getElementById('chat-close');
-    const widget = document.getElementById('chat-widget');
-
-    toggleBtn.addEventListener('click', () => {
-      toggleBtn.style.display = 'none';
-      widget.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      widget.style.display = 'none';
-      toggleBtn.style.display = 'flex';
-    });
-  </script>
-
   </main>
 
     </main>
