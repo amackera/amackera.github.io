@@ -48,7 +48,7 @@ ___Development Lead___, Jan 2017 - Dec 2017
 - Contributed directly to platform, application, and infrastructure code
 - Coordinated engineering team's efforts and goals
 
-### Deeptree
+### [Deeptree](https://deeptree.com)
 
 _Startup lab focused on developer tools_
 
