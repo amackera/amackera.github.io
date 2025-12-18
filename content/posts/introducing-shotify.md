@@ -1,7 +1,7 @@
 +++
 title = 'Introducing Shotify'
 date = 2025-12-15T09:46:08-08:00
-draft = true
+draft = false
 +++
 
 I sometimes find myself wanting to take a nicely formatted,
@@ -10,7 +10,9 @@ working on. There are a bunch of tools that exist already for this,
 but none with nice tight editor integration that I was looing for.
 
 So, I made my own: [Shotify](https://shotify.codes). Take a
-look.
+look:
+
+![Shotify Screenshot](/images/shotify-screenshot.png)
 
 Right now it supports Emacs (my baby), VSCode, CLI, and it's available
 as an `npm` package for you to integrate into your own projects.
