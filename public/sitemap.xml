@@ -2,38 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/introducing-shotify/</loc>
+    <loc>https://mackeracher.com/posts/introducing-shotify/</loc>
     <lastmod>2025-12-15T09:46:08-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://mackeracher.com/posts/</loc>
     <lastmod>2025-12-15T09:46:08-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/new-beginnings/</loc>
-    <lastmod>2025-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2025-year-of-the-desktop/</loc>
-    <lastmod>2025-06-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/on-failure/</loc>
+    <loc>https://mackeracher.com/posts/on-failure/</loc>
     <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/being-an-early-employee/</loc>
+    <loc>https://mackeracher.com/posts/being-an-early-employee/</loc>
     <lastmod>2024-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://mackeracher.com/cv/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://mackeracher.com/</loc>
     <lastmod>2024-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/</loc>
+    <loc>https://mackeracher.com/photos/</loc>
     <lastmod>2024-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/go-inspire-gpt/</loc>
+    <loc>https://mackeracher.com/posts/go-inspire-gpt/</loc>
     <lastmod>2023-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://mackeracher.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://mackeracher.com/tags/</loc>
   </url>
 </urlset>
