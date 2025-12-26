@@ -1,5 +1,5 @@
 ---
-title: "On Failure"
+title: "Meditations On Failure"
 date: 2025-06-21
 draft: false
 ---

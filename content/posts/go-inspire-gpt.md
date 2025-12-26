@@ -1,5 +1,5 @@
 ---
-title: "Inspire GPT"
+title: "Go Inspire GPT"
 date: 2023-02-28
 draft: false
 ---
