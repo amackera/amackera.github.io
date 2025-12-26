@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Anson MacKeracher'
 theme = "typo"
 
+[module]
+  [[module.imports]]
+    path = "github.com/divinerites/plausible-hugo"
+
 [params]
 description = "Personal webpage of Anson MacKeracher"
 paginationSize = 20
@@ -17,10 +21,11 @@ hideHeader = false
 [params.breadcrumbs]
 enabled = false
 
-# Google analytics code
-[services]
-  [services.googleAnalytics]
-    ID = 'G-PZQVLV2HE8'
+# Plausible Analytics
+[params.plausible]
+  enable = true
+  gitstar = false
+  domain = "mackeracher.com"
 
 # Social icons
 [[params.social]]
