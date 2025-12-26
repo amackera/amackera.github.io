@@ -4,34 +4,72 @@ date: 2025-06-21
 draft: false
 ---
 
-You can’t pick yourself up from failure if you never truly tried.
+On Charles Bukowski's gravestone is enscribed the epitaph "Don't
+Try". This deceptively simple phrase lives rent-free in my brain. It's
+a beautiful encapsulation of an incredibly important concept. 
 
-We learn from failure. Real failure. Where you tried so hard, the
-hardest you could, and you **still** failed. If we half-ass something,
-and fail, we have an excuse: didn’t try. If we succeed, we reinforce
-that it’s acceptable to half-ass things. Either way we learn the wrong
-lesson.
+We learn and grow from failure. Real failure. Times where you gave
+every ounce of yourself, pushing as hard as you could, and you
+**still** failed. At the very least, you learned what not to do. And
+usually you develop a clear vision for what to do differently next
+time.
 
-I get it. Things are scary, and failure hurts. Trying hard and not
-achieving your goal comes with crushing disappointment. But the key is
-to suffer through that and grow from it. That’s how you get
-better. Trying hard means _necessarily_ that you will fail. Failure is
-the `yin` to trying hard's `yang`. In the wise words of my father, "You
-ain't skiing unless you're falling."
+In contrast, when we half-ass things, no healthy learning or growth
+_ever_ happens. If we tried a thing and failed, we have the excuse
+that we "didn’t _really_ try". When we succeed, we learn that it’s ok
+to half-ass things. Either way we learn reinforce the wrong lessons.
 
-We lie to ourselves all the time about how hard we tried. If you find
-yourself pointing to external validation (success, money, praise)
-that’s a red flag that you probably don’t try that hard. Real effort
-is its own validation. If you don’t know deep down that you gave it
-your all, then you probably didn’t.
+I get it. Things are scary, and failure hurts. Putting yourself out
+there and not achieving your goal comes with crushing
+disappointment. The key is to suffer through that and grow from
+it. That’s how you get better. Trying hard means _necessarily_ that
+you will fail. Failure is the `yin` to trying hard's `yang`. In the
+wise words of my father, "You ain't skiing until you're falling."
 
-We have endless excuses for why we didn’t try hard. Some of them are
-important: injury is a good excuse not to push for a personal
-best. Don’t be stupid. But also, don’t lie to yourself. Underneath
-these excuses is a simple emotion: fear. It almost goes without saying
-that facing your fears is the only way to grow.
+If you find yourself craving external validation (success, money,
+praise) that’s a red flag that you're probably doing it wrong. Real
+effort is its own validation. If you don’t know deep down that you
+gave it your all, then you probably didn’t. Hard work *is* good work.
 
-Try hard. Revel in the failure, knowing you gave it your all. Failure
-doesn't mean you suck, _never_ failing means you suck. Nobody will
-push you harder than you can push yourself. You're stronger than you
-think.
+The reason this works is not because hard work is some kind of
+mystical Aristotelian virtue signalling. It works because putting your
+entire self into a thing is scary. Growth comes through facing your
+fears and conquering them. Even if you fail capture the keep, bucking
+up the courage to storm the gates is the real victory. Overcoming your
+fear reinforces your self-mastery, and it feels amazing.
+
+And so, we return to Bukowski's wise words: "Don't Try." Bukowski
+didn't have an easy ride to success. After half a lifetime of
+rejection, at the age of 49 he finally received a meagre offer to
+write for Black Sparrow Press for $100 per month. On the choice of
+whether to accept the offer, he wrote:
+
+> I have one of two choices — stay in the post office and go crazy
+> ... or stay out here and play at writer and starve. I have decided
+> to starve.
+
+From that point on he published all the rest of his works through
+Black Sparrow, as gratitude for their faith in him.
+
+Bukowski's own thoughts on "working hard" are more nuanced than I've
+represented here. He wasn't necessarily advocating the importance of
+hard work or the value in failure. He was an advocate of patience and
+truth. In one of Bukowski's more famous poems, _so you want to be a
+writer?_, he wrote:
+
+> if you have to wait for it to roar out of
+> you,
+> then wait patiently.
+> if it never does roar out of you,
+> do something else.
+
+But later, in the same poem, he wrote:
+
+> when it is truly time,
+> and if you have been chosen,
+> it will do it by
+> itself and it will keep on doing it
+> until you die or it dies in you.
+
+Be patient, don't force it, but when you get the choice, choose to
+starve.
