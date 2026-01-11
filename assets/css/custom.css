@@ -4,6 +4,12 @@ article p,
   text-align: justify;
 }
 
+/* Preserve line breaks in blockquotes (for poetry) */
+blockquote p {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
 /* Fix image layout */
 figure {
   display: block;
