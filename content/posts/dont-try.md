@@ -45,9 +45,8 @@ rejection, at age 49 he finally received a meagre offer to
 write for Black Sparrow Press for $100 per month. On the choice of
 whether to accept the offer, he wrote:
 
-> I have one of two choices — stay in the post office and go crazy
-> ... or stay out here and play at writer and starve. I have decided
-> to starve.
+> I have one of two choices — stay in the post office and go crazy ... or stay out here 
+> and play at writer and starve. I have decided to starve.
 
 From that point on he published all of his remaining work through
 Black Sparrow, as gratitude for their faith in him.
