@@ -1,5 +1,6 @@
-/* Justified text for posts */
-article p {
+/* Justified text for posts and homepage */
+article p,
+.home-page-content p {
   text-align: justify;
 }
 
