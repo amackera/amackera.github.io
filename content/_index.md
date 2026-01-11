@@ -19,8 +19,8 @@ ML models, high-throughput batch pipelines, and durable execution.
 
 A University of Waterloo ECE graduate, I've since relocated to
 Vancouver on Canada's west coast. Over the last 15+ years, I've
-shipped code in almost a dozen programming languages, worked with some
-exceptional people, and shipped software that's used by millions
-worldwide.
+shipped production code in almost a dozen programming languages,
+worked with some exceptional people, and produced software used by
+millions worldwide.
 
 ![Anson](IMG_1740-med.png#small "Anson")
