@@ -1,7 +1,7 @@
 ---
 title: "2026, Year of the Linux Desktop"
 date: 2026-01-11
-draft: true
+draft: false
 ---
 
 The year: 2026. The situation: installing Linux on a desktop
