@@ -99,7 +99,7 @@ __Applied Science, Computer Engineering__, 2005 - 2010
 - Wrote a real-time OS: [`rawkos`](https://github.com/amackera/rawkos)
 - Programming languages, data structures, algorithms, databases
 - VLSI (Verilog and VHDL), PLC programming, FPGA prototyping
-- Volunteered and learned a so much at the ASIC Design Team
+- Volunteered and learned so much at the ASIC Design Team
 - Engineering Jazz Band, Trumpet
 - University Choir, Tenor
 
