@@ -26,7 +26,7 @@ gamification, no ads, no in-app purchases. Just a timer.
 
 I also wanted to experiment with Apple's new Liquid Glass design
 language, and a meditation timer seemed like the perfect canvas for
-it. The result is an interface that feels calm and intuitive—exactly
+it. The result is an interface that feels calm and intuitive, exactly
 what you want when you're about to close your eyes.
 
 It's free, and it'll stay free. [Give it a
