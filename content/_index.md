@@ -8,10 +8,11 @@ conditions.
 
 I've led engineering teams and built large-scale services in critical
 domains including climate tech, education, legal, finance, and
-enterprise support. Previous roles include Head of Engineering at
-[Mangrove Systems](https://mangrovesystems.com) and
-[Ada](https://ada.cx), CTO at [LegalMate](https://legalmate.co), and
-Chief Architect and VP Technology at [Top Hat](https://tophat.com).
+enterprise support. Previous roles include Engineering at
+[Hyper](https://callhyper.com), Head of Engineering at [Mangrove
+Systems](https://mangrovesystems.com) and [Ada](https://ada.cx), CTO
+at [LegalMate](https://legalmate.co), and Chief Architect and VP
+Technology at [Top Hat](https://tophat.com).
 
 My expertise is in designing and deploying scalable, fault-tolerant
 cloud services: transactional and real-time web systems, online
