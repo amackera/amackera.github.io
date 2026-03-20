@@ -1,9 +1,22 @@
 ---
-date: 2024-09-19
+date: 2026-03-20
 title: "CV"
 ---
 
 ## Experience
+
+### [Hyper](https://callhyper.com)
+
+_Automating non-emergency 9-1-1 calls to speed up response times and save lives._
+
+___Engineering___, Sept 2025 - Present
+
+- AI Engineering and deploymet of agentic call handling solution
+- Leading a team of exceptional Elixir and Python engineers
+- Overseeing security and compliance, including SOC2
+- Recruiting, performance management, strategy, and culture of engineering<
+- IT operations and cloud infrastructure (Azure, AWS, LiveKit)
+- Elixir, Python, PostgreSQL
 
 ### [Mangrove Systems](https://mangrovesystems.com)
 
