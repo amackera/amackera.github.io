@@ -7,7 +7,7 @@ I create software systems that operate reliably under unreliable
 conditions.
 
 I've led engineering teams and built large-scale services in critical
-domains including climate tech, education, legal, finance, and
+domains including public safety, climate tech, education, legal, finance, and
 enterprise support. Previous roles include Engineering at
 [Hyper](https://callhyper.com), Head of Engineering at [Mangrove
 Systems](https://mangrovesystems.com) and [Ada](https://ada.cx), CTO
