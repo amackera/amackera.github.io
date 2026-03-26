@@ -27,7 +27,7 @@ Often times you will be told you need to "scale yourself" in accordance with the
 
 If you ever stop reinventing yourself, even for a short time (a few weeks, a few months), you will demonstrate your inability to scale and you *will* be replaced. If you're "irreplaceable", efforts will begin to make you redundant. The startup and it's founders are not your friends. They need you to do a thing, and if you can't do the thing, you're not going to last long.
 
-That's just the harsh reality. Loyalty means nothing when you're getting a paycheck. Assume you're hard work has already been compensated for, and never rest on your laurels.
+That's just the harsh reality. Loyalty means nothing when you're getting a paycheck. Assume your hard work has already been compensated for, and never rest on your laurels.
 
 ## Failure vs Success
 

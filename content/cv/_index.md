@@ -11,10 +11,10 @@ _Automating non-emergency 9-1-1 calls to speed up response times and save lives.
 
 ___Engineering___, Sept 2025 - Present
 
-- AI Engineering and deploymet of agentic call handling solution
+- AI Engineering and deployment of agentic call handling solution
 - Leading a team of exceptional Elixir and Python engineers
 - Overseeing security and compliance, including SOC2
-- Recruiting, performance management, strategy, and culture of engineering<
+- Recruiting, performance management, strategy, and culture of engineering
 - IT operations and cloud infrastructure (Azure, AWS, LiveKit)
 - Elixir, Python, PostgreSQL
 
