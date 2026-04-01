@@ -6,7 +6,7 @@ article p,
   hyphens: auto;
 }
 
-/* Mobile readability + safe-area padding (iOS notch/status bar) */
+/* Mobile safe-area padding (iOS notch/status bar) */
 @media (max-width: 768px) {
   body {
     padding-top: env(safe-area-inset-top, 0);
@@ -14,9 +14,9 @@ article p,
 
   article p,
   .home-page-content p {
-    text-align: left;
-    hyphens: none;
-    text-wrap: pretty;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
   }
 
   article h1,
