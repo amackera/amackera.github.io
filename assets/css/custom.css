@@ -1,7 +1,8 @@
-/* Justified text for posts and homepage */
+/* Keep paragraph spacing natural (avoid awkward rivers on narrow screens) */
 article p,
 .home-page-content p {
-  text-align: justify;
+  text-align: left;
+  text-wrap: pretty;
 }
 
 /* Preserve line breaks in blockquotes (for poetry) */
