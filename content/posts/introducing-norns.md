@@ -46,7 +46,7 @@ concurrency, never go down, recover from failures automatically, and
 allow live upgrades without dropping calls. Sound familiar?
 
 Replace "telephone switches" with "AI agents" and the overlap is
-striking. Here's why.
+striking.
 
 Most languages treat crashes as something to prevent. Forced to write
 defensive code, you wrap everything in try/catch, and check every
@@ -61,21 +61,22 @@ runtime handle recovery.
 
 On the BEAM, every unit of execution is a *process*, a lightweight,
 isolated entity with its own memory. When a process crashes, it just
-crashes. It doesn't corrupt shared memory. It doesn't take down its
+crashes. It doesn't corrupt shared memory or take down its
 neighbors. A *supervisor* process watches it, notices the crash, and
 decides what to do: restart it, escalate, or just let it go. This
 happens automatically at the VM level. If you're building durable
-agent execution in Go or Java, you end up reimplementing this. You
-build process managers, health checks, restart logic, crash isolation.
-The BEAM gives you all of that as the default behavior of the runtime.
+agent execution in Go or Java, you end up reimplementing this,
+building process managers, health checks, restart logic, and crash
+isolation. The BEAM gives you all of that as the default behavior of
+the runtime.
 
-BEAM processes are not OS threads. They're not even goroutines.
-They're extraordinarily lightweight (a few hundred bytes of initial
-memory) with isolated heaps and per-process garbage collection.
-You can run hundreds of thousands of them on a single machine without
-even thinking about it. The BEAM's scheduler preemptively multiplexes
-them across CPU cores, so no single process can starve the others.
-The concurrency model isn't bolted on, it's built in.
+BEAM processes are not OS threads.  They're extraordinarily
+lightweight (a few hundred bytes of initial memory) with isolated
+heaps and per-process garbage collection.  You can run hundreds of
+thousands of them on a single machine without even thinking about
+it. The BEAM's scheduler preemptively multiplexes them across CPU
+cores, so no single process can starve the others.  The concurrency
+model isn't bolted on, it's built in.
 
 This is the runtime Ericsson built for telephone switches that
 couldn't go down. It's the right substrate for agents that cannot
@@ -89,8 +90,8 @@ The kind that sends emails, charges credit cards, dispatches
 emergency services — where a dropped run or a duplicated action isn't
 a minor inconvenience, it's a bug with consequences.
 
-At the core, Norns is a pure state machine. It never calls an LLM. It
-never executes a tool. Its only job is to manage state transitions and
+At it's core, Norns is a pure state machine. It never calls an LLM or
+executes a tool. Its only job is to manage state transitions and
 persist events. Every step of execution (LLM requests, responses, tool
 calls, results, checkpoints) is written to an event log. If an agent
 process dies, Norns replays from the last checkpoint and continues.
@@ -99,10 +100,9 @@ Temporal, but native to the BEAM.
 
 Under the hood, each agent is a `GenServer` (Erlang's abstraction for
 a stateful, message-driven process) running under a
-`DynamicSupervisor`. The BEAM properties described above aren't things
-Norns implements — they're things Norns inherits. Process isolation,
-crash recovery, massive concurrency — those come from the runtime.
-What Norns adds is the orchestration layer on top.
+`DynamicSupervisor`. Process isolation, crash recovery, and massive
+concurrency all come for free from the BEAM. What Norns adds is the
+orchestration layer on top.
 
 Concretely, imagine an agent handling an intake call. It transcribes
 the caller's information, looks up the nearest dispatcher, and sends a
