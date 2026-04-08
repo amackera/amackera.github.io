@@ -3,6 +3,12 @@ date: 2026-01-11
 title: "Projects"
 ---
 
+## Norns
+
+[Norns](https://github.com/amackera/norns) — An open-source durable execution runtime for AI agents on the BEAM.
+
+Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/).
+
 ## Chronicle
 
 [Chronicle](https://chronicle.work) — A shared history for your recurring meetings.
