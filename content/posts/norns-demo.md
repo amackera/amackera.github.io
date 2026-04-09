@@ -10,7 +10,7 @@ Last week, I [introduced Norns](/posts/introducing-norns/). Here's a
 the worker twice, the agent keeps trucking and ends up completing the job.
 
 <video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/b300b164-dc0c-44ea-a794-1de00b4f01a7" type="video/mp4">
+  <source src="/videos/norns-demo-small.mov" type="video/quicktime">
 </video>
 
 ## The Agent
