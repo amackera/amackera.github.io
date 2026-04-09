@@ -67,5 +67,7 @@ url = "/photos"
 
 # Syntax highligth on code blocks
 [markup]
+[markup.goldmark.renderer]
+unsafe = true
 [markup.highlight]
 style = 'algol'
