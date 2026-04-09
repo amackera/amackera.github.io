@@ -2,7 +2,7 @@
 title = 'Kill the Worker, Keep the Run'
 date = 2026-04-08T17:27:31-07:00
 description = 'A short demo of Norns recovering from worker crashes mid-execution'
-draft = true
+draft = false
 +++
 
 I [introduced Norns](/posts/introducing-norns/) last week. Here's a
