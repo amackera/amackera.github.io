@@ -70,4 +70,4 @@ url = "/photos"
 [markup.goldmark.renderer]
 unsafe = true
 [markup.highlight]
-style = 'algol'
+style = 'monokai'
