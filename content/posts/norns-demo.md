@@ -5,9 +5,9 @@ description = 'A short demo of Norns recovering from worker crashes mid-executio
 draft = false
 +++
 
-I [introduced Norns](/posts/introducing-norns/) last week. Here's a
-30-second demo of it actually working. I kill the worker twice
-mid-run, and the agent finishes anyway.
+Last week, I [introduced Norns](/posts/introducing-norns/). Here's a
+30-second demo of it actually working. In the video, despite killing
+the worker twice, the agent keeps trucking and ends up completing the job.
 
 <video controls width="100%">
   <source src="https://github.com/user-attachments/assets/b300b164-dc0c-44ea-a794-1de00b4f01a7" type="video/mp4">
@@ -19,7 +19,8 @@ The full example is in
 [norns-hello-agent](https://github.com/amackera/norns-hello-agent).
 The agent has one custom tool (`say_hello`) plus Norns' built-in
 `wait` timer. The system prompt tells it to wait 10 seconds, then
-greet the user by name. Simple on purpose.
+greet the user by name. It's a simple, illustrative, `hello
+world`-style agent.
 
 Here's the worker:
 
@@ -60,30 +61,30 @@ result = client.send_message("hello-bot", "Hello, I'm Anson.", wait=True, timeou
 print(f"Output: {result.output}")
 ```
 
-`norns.run()` blocks forever and pulls tasks from the server -- same
-pattern as a Temporal worker. The `wait` tool is built into Norns, so
-the agent can call it without the worker defining it.
+`norns.run()` blocks forever and pulls tasks from the server, which is
+inspired by (stolen from) Temporal. The `wait` tool is built into
+Norns, so the agent can call it without the worker defining it.
 
 ## The Demo
 
 The video has three tmux panes: the client on the left, the worker on
-the bottom, and `nornsctl runs tail 102` on the right streaming the
-run's event log.
+the bottom, and `nornsctl` on the right tailing the run's event log.
 
 The client sends "Hello, I'm Anson." and the run starts. The worker
-makes an LLM call, Claude responds with a call to `wait` (10
-seconds), and I hit `Ctrl-C`. Worker dies. The event log shows
-`llm_response` and `waiting_timer 10s`, then nothing.
+makes an LLM call, Claude responds with a call to `wait` (10 seconds),
+and I hit `Ctrl-C`. Worker dies. The event log shows `llm_response`
+and `waiting_timer 10s`, then nothing.
 
 I restart the worker. It reconnects, Norns replays the event log, and
-execution picks up where it left off. It doesn't redo the LLM call --
+execution picks up where it left off. It doesn't redo the LLM call,
 that response is already in the log. It waits out the timer, gets the
 result, makes another LLM call. Claude calls `say_hello`. "Hello
 Anson."
 
-I hit `Ctrl-C` again. Worker dies again. I restart it again. Norns
-replays the full log, skips the steps that already completed, makes
-one final LLM call, and the run finishes. The client prints:
+I hit `Ctrl-C` to slay the worker once more, and I restart it
+again. Norns replays the full log, skips the steps that already
+completed, makes one final LLM call, and the run finishes. The client
+prints:
 
 ```
 Run 102: completed
@@ -101,10 +102,10 @@ sends the full history. The worker rebuilds state from the log and
 resumes from the last incomplete step.
 
 Completed tools don't re-execute. Side-effecting tools get idempotency
-keys derived from the run ID and step number -- if a result already
+keys derived from the run ID and step number. If a result already
 exists for that key, the tool is skipped. In this demo `say_hello` is
-pure, but the same mechanism prevents duplicate emails or double
-charges in production.
+pure, but in production, this mechanism prevents duplicate emails or double
+charges.
 
 The client doesn't know any of this happened. It sent a message and
 got a response.
