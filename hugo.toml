@@ -41,6 +41,14 @@ name = "HN"
 url = "https://news.ycombinator.com/user?id=amackera"
 
 [[params.social]]
+name = "X"
+url = "https://x.com/amackera"
+
+[[params.social]]
+name = "Bluesky"
+url = "https://bsky.app/profile/amackera.bsky.social"
+
+[[params.social]]
 name = "Email"
 url = "mailto:anson@mackeracher.com"
 
