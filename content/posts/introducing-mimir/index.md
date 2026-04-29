@@ -98,21 +98,3 @@ hear what breaks.
 For background: [Code That Cannot Fail](/posts/durable-execution/) is
 why I care about this problem. [Introducing Norns](/posts/introducing-norns/)
 is how the runtime works.
-
----
-
-## Teaser copy
-
-**X / Bluesky:**
-
-Last week I closed my laptop in the middle of a Mimir run, walked
-away, came back, and the run had finished. The Python worker
-reconnected to its Elixir runtime and picked up where it left off.
-New post on how that works.
-
-**Elixir newsletter (two lines):**
-
-Mimir is the first reference agent built on Norns. The agent is in
-Python: durable run state lives on the BEAM, the worker speaks
-whatever language the problem wants, and a closed laptop lid stops
-counting as an outage.
