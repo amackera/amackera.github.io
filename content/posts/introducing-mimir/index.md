@@ -9,7 +9,7 @@ draft = false
 questions. It ingests GitHub repos, Google Docs, Figma files, and
 arbitrary URLs, keeps persistent memory in Postgres with pgvector, and
 lives in your Slack waiting to be asked things. It's the first
-reference agent built on [Norns](https://nornscode.com), the Elixir
+agent I've built on [Norns](https://nornscode.com), the Elixir
 durable execution runtime I wrote about
 [a few weeks back](/posts/introducing-norns/). Mimir itself is written
 in Python. The Python process can crash, redeploy, or drift versions,
@@ -18,9 +18,10 @@ the BEAM and not in the worker.
 
 ## A test I didn't mean to run
 
-Last week I was running Mimir-Dev on my laptop, against Norns Cloud.
-I'd had it ingest three of my own blog posts a few days earlier and
-wanted to confirm it still remembered them. So I asked it, in Slack:
+Last week I was running Mimir-Dev (the dev instance) on my laptop,
+against Norns Cloud. I'd had it ingest three of my own blog posts a
+few days earlier and wanted to confirm it still remembered them. So
+I asked it in Slack:
 
 ![Slack message asking Mimir-Dev about three blog posts](ingest-request.png)
 
@@ -39,16 +40,14 @@ that runs the LLM calls and tool invocations, was on my laptop. When
 the lid closed, the worker dropped its WebSocket. Norns noticed a
 disconnected worker, marked the in-flight tool call as needing a
 redispatch, and waited. There was nothing for it to *recover* from.
-The event log on the BEAM already had every step up to that point,
-persisted. When my laptop woke up, the worker reconnected, Norns
+The event log on the BEAM had already persisted every step up to
+that point. When my laptop woke up, the worker reconnected, Norns
 handed it the next pending tool call, and the run continued.
 
 ![The Norns dashboard showing Run #30's event log: llm_request, tool_call, tool_result, and checkpoint_saved entries persisted on the BEAM](event-log.png)
 
 The user-visible effect is "I closed my laptop and Mimir finished my
-request anyway." The system-level effect is that durable state and
-the Python process are decoupled in a way that Python code, by itself,
-simply cannot achieve.
+request anyway."
 
 ## What lives where
 
