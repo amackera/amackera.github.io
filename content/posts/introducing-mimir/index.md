@@ -5,7 +5,7 @@ description = 'A Slack bot that answers product questions, built on Norns'
 draft = false
 +++
 
-[Mimir](https://mimir.nornscode.com) is a Slack bot that answers product
+[Mimir](https://nornscode.com/mimir) is a Slack bot that answers product
 questions. It ingests GitHub repos, Google Docs, Figma files, and
 arbitrary URLs, keeps persistent memory in Postgres with pgvector, and
 lives in your Slack waiting to be asked things. It's the first
@@ -22,22 +22,16 @@ Last week I was running Mimir-Dev on my laptop, against Norns Cloud.
 I'd had it ingest three of my own blog posts a few days earlier and
 wanted to confirm it still remembered them. So I asked it, in Slack:
 
-> @Mimir-Dev do you know these blog posts
-> https://mackeracher.com/posts/durable-execution/,
-> https://mackeracher.com/posts/introducing-norns/, and
-> https://mackeracher.com/posts/norns-demo/.
->
-> Let me know when you're done
+![Slack message asking Mimir-Dev about three blog posts](ingest-request.png)
 
 Then I closed my laptop and walked away. I wasn't trying to run a
 test, I just had somewhere to be.
 
 When I opened my laptop later, the run had finished. Mimir had searched
 its memory, found the existing entries, reconnected each URL as a
-knowledge source, and replied. *Done! I've connected all three blog
-posts as knowledge sources. I can now search their content to answer
-questions about durable execution, Norns introduction, and the demo
-examples.*
+knowledge source, and replied:
+
+![Mimir-Dev replying that it has connected all three blog posts as knowledge sources](ingest-reply.png)
 
 What actually happened, mechanically, is the part worth dwelling on.
 The agent run lives on Norns Cloud. The worker, the Python process
