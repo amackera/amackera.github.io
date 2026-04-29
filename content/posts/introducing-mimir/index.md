@@ -1,20 +1,19 @@
 +++
-title = 'Mimir, a Reference Agent for Norns'
+title = 'I Closed My Laptop and Mimir Kept Going'
 date = 2026-04-29T14:48:12-07:00
 description = 'A Slack bot that answers product questions, built on Norns'
 draft = false
 +++
 
-[Mimir](https://nornscode.com/mimir) is a Slack bot that answers product
-questions. It ingests GitHub repos, Google Docs, Figma files, and
-arbitrary URLs, keeps persistent memory in Postgres with pgvector, and
-lives in your Slack waiting to be asked things. It's the first
-agent I've built on [Norns](https://nornscode.com), the Elixir
-durable execution runtime I wrote about
-[a few weeks back](/posts/introducing-norns/). Mimir itself is written
-in Python. The Python process can crash, redeploy, or drift versions,
-and the agent's run keeps going, because the durable state lives on
-the BEAM and not in the worker.
+[Mimir](https://nornscode.com/mimir) is a Slack bot that answers
+product questions. It ingests GitHub repos, Google Docs, Figma files,
+and arbitrary URLs, and keeps persistent memory in Postgres with
+pgvector. It's the first in a series of reference agents built on
+[Norns](https://nornscode.com), the Elixir durable execution runtime
+I wrote about [a few weeks back](/posts/introducing-norns/). Mimir is
+in Python. The agent's run keeps going even when the Python worker
+doesn't, because the durable state lives on the BEAM and not in the
+worker.
 
 ## A test I didn't mean to run
 
@@ -91,5 +90,10 @@ Mimir lives in the Norns Slack workspace.
 [Come hang out](https://join.slack.com/t/norns-workspace/shared_invite/zt-3w5rdxvpy-yqTGYx_TXb8zffwGXkCzGg),
 ask it things, watch it respond to others. The
 [repo](https://github.com/nornscode/norns-mimir-agent) has setup
-instructions if you want it in your own Slack. Either way, I'd love to
-hear what breaks.
+instructions if you want it in your own Slack.
+
+A reference agent's job at this stage is to be the worked example,
+the thing you read when you're deciding whether the runtime can hold
+up under your own agent. What I most want to see is people pointing
+Norns at agents that look nothing like Mimir, and telling me what
+cracks.
