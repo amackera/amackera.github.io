@@ -43,6 +43,8 @@ The event log on the BEAM already had every step up to that point,
 persisted. When my laptop woke up, the worker reconnected, Norns
 handed it the next pending tool call, and the run continued.
 
+![The Norns dashboard showing Run #30's event log: llm_request, tool_call, tool_result, and checkpoint_saved entries persisted on the BEAM](event-log.png)
+
 The user-visible effect is "I closed my laptop and Mimir finished my
 request anyway." The system-level effect is that durable state and
 the Python process are decoupled in a way that Python code, by itself,
