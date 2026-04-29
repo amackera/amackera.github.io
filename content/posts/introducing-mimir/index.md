@@ -52,10 +52,10 @@ simply cannot achieve.
 
 ## What lives where
 
-Norns owns the event log. Every LLM request, every response, every
-tool call, every result, every checkpoint. That log lives on the BEAM
-and survives container evictions, deploys, network partitions, and
-laptop lids.
+Norns owns the event log — every LLM request and response, every
+tool call and result, every checkpoint. The log lives on the BEAM,
+where it survives container evictions, deploys, network partitions,
+and laptop lids.
 
 Mimir owns the tools. It holds the OpenAI key. It pulls tool-call
 requests off a WebSocket, runs them in Python, and sends the results
@@ -69,7 +69,7 @@ canonical run state.
 The reason Mimir is in Python is mundane: the ingestion pipeline.
 Chunking, embedding, normalizing whatever flavor of garbage HTML
 someone's CMS produced. Python has had mature tooling for this for
-years, Elixir doesn't, and there's no reason to reimplement any of it.
+years, Elixir doesn't, and there's no reason to reinvent the wheel.
 
 This is the practical case for a worker architecture. The orchestrator
 is the language you want for fault tolerance and concurrency. The
