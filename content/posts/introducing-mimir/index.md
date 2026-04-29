@@ -90,11 +90,7 @@ around active work.
 
 Mimir lives in the Norns Slack workspace.
 [Come hang out](https://join.slack.com/t/norns-workspace/shared_invite/zt-3w5rdxvpy-yqTGYx_TXb8zffwGXkCzGg),
-ask it things, watch it answer other people's. The
+ask it things, watch it respond to others. The
 [repo](https://github.com/nornscode/norns-mimir-agent) has setup
 instructions if you want it in your own Slack. Either way, I'd love to
 hear what breaks.
-
-For background: [Code That Cannot Fail](/posts/durable-execution/) is
-why I care about this problem. [Introducing Norns](/posts/introducing-norns/)
-is how the runtime works.
