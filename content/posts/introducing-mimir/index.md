@@ -10,10 +10,10 @@ product questions. It ingests GitHub repos, Google Docs, Figma files,
 and arbitrary URLs, and keeps persistent memory in Postgres with
 pgvector. It's the first in a series of reference agents built on
 [Norns](https://nornscode.com), the Elixir durable execution runtime
-I wrote about [a few weeks back](/posts/introducing-norns/). Mimir is
-in Python. The agent's run keeps going even when the Python worker
-doesn't, because the durable state lives on the BEAM and not in the
-worker.
+I wrote about [a few weeks back](/posts/introducing-norns/). Mimir
+itself is in Python, and the agent's run keeps going even when the
+Python worker doesn't, because the durable state lives on the BEAM
+and not in the worker.
 
 ## A test I didn't mean to run
 
@@ -41,12 +41,11 @@ disconnected worker, marked the in-flight tool call as needing a
 redispatch, and waited. There was nothing for it to *recover* from.
 The event log on the BEAM had already persisted every step up to
 that point. When my laptop woke up, the worker reconnected, Norns
-handed it the next pending tool call, and the run continued.
+handed it the next pending tool call, and the run continued. The
+user-visible effect is "I closed my laptop and Mimir finished my
+request anyway."
 
 ![The Norns dashboard showing Run #30's event log: llm_request, tool_call, tool_result, and checkpoint_saved entries persisted on the BEAM](event-log.png)
-
-The user-visible effect is "I closed my laptop and Mimir finished my
-request anyway."
 
 ## What lives where
 
@@ -67,7 +66,7 @@ canonical run state.
 The reason Mimir is in Python is mundane: the ingestion pipeline.
 Chunking, embedding, normalizing whatever flavor of garbage HTML
 someone's CMS produced. Python has had mature tooling for this for
-years, Elixir doesn't, and there's no reason to reinvent the wheel.
+years, Elixir doesn't, and there's no point in reimplementing the wheel.
 
 This is the practical case for a worker architecture. The orchestrator
 is the language you want for fault tolerance and concurrency. The
