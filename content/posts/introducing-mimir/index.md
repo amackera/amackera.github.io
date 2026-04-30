@@ -53,7 +53,7 @@ request anyway."
 Norns owns the event log. Every LLM request and response, tool call,
 result, and every checkpoint. The log lives on the BEAM,
 where it survives container evictions, deploys, network partitions,
-and laptop lids.
+and laptop sleeps.
 
 Mimir owns the tools. It holds the OpenAI key. It pulls tool-call
 requests off a WebSocket, runs them in Python, and sends the results
