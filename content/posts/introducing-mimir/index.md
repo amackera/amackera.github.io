@@ -35,14 +35,14 @@ knowledge source, and replied:
 ![Mimir-Dev replying that it has connected all three blog posts as knowledge sources](ingest-reply.png)
 
 What actually happened, mechanically, is the part worth dwelling on.
-The agent run lives on Norns Cloud. The worker, the Python process
+The agent _run_ lives on _Norns Cloud_. The _worker_, the Python process
 that runs the LLM calls and tool invocations, was on my laptop. When
-the lid closed, the worker dropped its WebSocket. Norns noticed a
-disconnected worker, marked the in-flight tool call as needing a
+the lid closed, the _worker_ dropped its WebSocket. Norns noticed a
+disconnected _worker_, marked the in-flight tool call as needing a
 redispatch, and waited. There was nothing for it to *recover* from.
 The event log on the BEAM had already persisted every step up to
-that point. When my laptop woke up, the worker reconnected, Norns
-handed it the next pending tool call, and the run continued. The
+that point. When my laptop woke up, the _worker_ reconnected, Norns
+handed it the next pending _tool call_, and the run continued. The
 user-visible effect is "I closed my laptop and Mimir finished my
 request anyway."
 
