@@ -15,7 +15,7 @@ itself is written in Python, and even when the agent's worker gets
 stopped and restarted, the run continues on. That's because the
 durable state is held in Norns, not in the worker.
 
-## A test I didn't mean to run
+## The test I didn't mean to run
 
 Last week I was running Mimir-Dev (the dev instance) on my laptop,
 against Norns Cloud. I'd had it ingest three of my own blog posts a
