@@ -50,8 +50,8 @@ request anyway."
 
 ## What lives where
 
-Norns owns the event log — every LLM request and response, every
-tool call and result, every checkpoint. The log lives on the BEAM,
+Norns owns the event log. Every LLM request and response, tool call,
+result, and every checkpoint. The log lives on the BEAM,
 where it survives container evictions, deploys, network partitions,
 and laptop lids.
 
