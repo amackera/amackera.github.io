@@ -25,7 +25,7 @@ I asked it in Slack:
 ![Slack message asking Mimir-Dev about three blog posts](ingest-request.png)
 
 Then I closed my laptop. I was boarding a ferry bound from Bowen
-Island to Vancouver.
+Island to Vancouver, I wasn't trying to run a test.
 
 When I opened my laptop later, the run had finished. Mimir had searched
 its memory, found the existing entries, reconnected each URL as a
