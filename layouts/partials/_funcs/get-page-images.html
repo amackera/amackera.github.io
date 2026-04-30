@@ -1,0 +1,25 @@
+{{- /*
+  Returns a slice of image resources for the given page.
+  Looks for images in page resources (page bundles) first,
+  then in the page's front matter params.
+*/ -}}
+
+{{- $images := slice -}}
+
+{{- /* Look for images in page resources (page bundles) */ -}}
+{{- if .Resources -}}
+  {{- $images = $images | append (.Resources.ByType "image") -}}
+{{- end -}}
+
+{{- /* Look for images in front matter */ -}}
+{{- with .Params.images -}}
+  {{- range . -}}
+    {{- $img := resources.Get . -}}
+    {{- if $img -}}
+      {{- $images = $images | append $img -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Return the images */ -}}
+{{- return $images -}}

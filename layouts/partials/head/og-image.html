@@ -1,0 +1,24 @@
+{{- /*
+  Returns the URL for the Open Graph image.
+  First checks for page-specific images, then falls back to site default.
+*/ -}}
+
+{{- $ogImage := "" -}}
+
+{{- /* Try to use the first image from page resources (page bundles) */ -}}
+{{- if .Resources -}}
+  {{- $pageImages := .Resources.ByType "image" -}}
+  {{- if $pageImages -}}
+    {{- $ogImage = (index $pageImages 0).Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Fallback to site-wide og-image if no page-specific image */ -}}
+{{- if not $ogImage -}}
+  {{- $siteImage := resources.Get "images/og-image.png" -}}
+  {{- if $siteImage -}}
+    {{- $ogImage = $siteImage.Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $ogImage -}}
