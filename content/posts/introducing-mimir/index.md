@@ -11,9 +11,9 @@ and arbitrary URLs, and keeps persistent memory in Postgres with
 pgvector. It's the first in a series of reference agents built on
 [Norns](https://nornscode.com), the Elixir durable execution runtime
 I wrote about [a few weeks back](/posts/introducing-norns/). Mimir
-itself is in Python, and the agent's run keeps going even when the
-Python worker doesn't, because the durable state lives on the BEAM
-and not in the worker.
+itself is written in Python, and even when the agent's worker gets
+stopped and restarted, the run continues on. That's because the
+durable state is held in Norns, not in the worker.
 
 ## A test I didn't mean to run
 
