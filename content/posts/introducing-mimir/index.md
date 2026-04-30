@@ -2,6 +2,7 @@
 title = 'I Closed My Laptop and Mimir Kept Going'
 date = 2026-04-29T14:48:12-07:00
 description = 'A Slack bot that answers product questions, built on Norns'
+images = ['/posts/introducing-mimir/event-log.png']
 draft = false
 +++
 
