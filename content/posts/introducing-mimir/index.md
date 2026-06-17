@@ -1,5 +1,5 @@
 +++
-title = 'I Closed My Laptop and Mimir Kept Going'
+title = 'Mimir in Production'
 date = 2026-04-29T14:48:12-07:00
 description = 'A Slack bot that answers product questions, built on Norns'
 images = ['/posts/introducing-mimir/event-log.png']
@@ -16,12 +16,12 @@ itself is written in Python. Even when the worker gets stopped and
 restarted, the run continues, because the durable state lives in
 Norns, not in the worker.
 
-## The test I didn't mean to run
+## The laptop test
 
-Last week I was running Mimir-Dev (the dev instance) on my laptop,
-against Norns Cloud. I'd had it ingest three of my own blog posts a
-few days earlier and wanted to confirm it still remembered them. So
-I asked it in Slack:
+Last week I was running Mimir-Dev on my laptop, against Norns
+Cloud. I'd had it ingest three of my blog posts a few days earlier
+and wanted to confirm it still remembered them. So I asked it in
+Slack:
 
 ![Slack message asking Mimir-Dev about three blog posts](ingest-request.png)
 
@@ -65,7 +65,7 @@ the canonical run state.
 ## Python
 
 Why Python? The ingestion pipeline. Chunking, embedding,
-normalizing whatever flavor of garbage HTML someone's CMS produced.
+normalizing whatever flavour of garbage HTML someone's CMS produced.
 Python has mature tooling for this. Elixir doesn't. No point
 reimplementing the wheel.
 

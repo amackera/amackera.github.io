@@ -63,12 +63,12 @@ runtime handle recovery.
 On the BEAM, every unit of execution is a *process*, a lightweight,
 isolated entity with its own memory. When a process crashes, it just
 crashes. It doesn't corrupt shared memory or take down its
-neighbors. A *supervisor* process watches it, notices the crash, and
+neighbours. A *supervisor* process watches it, notices the crash, and
 decides what to do: restart it, escalate, or just let it go. This
 happens automatically at the VM level. If you're building durable
 agent execution in Go or Java, you end up reimplementing this,
 building process managers, health checks, restart logic, and crash
-isolation. The BEAM gives you all of that as the default behavior of
+isolation. The BEAM gives you all of that as the default behaviour of
 the runtime.
 
 BEAM processes are not OS threads.  They're extraordinarily
