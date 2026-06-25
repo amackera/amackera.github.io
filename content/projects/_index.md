@@ -3,17 +3,17 @@ date: 2026-01-11
 title: "Projects"
 ---
 
-## Norns
-
-[Norns](https://nornscode.com) — An open-source durable execution runtime for AI agents on the BEAM.
-
-Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/).
-
 ## Mimir
 
 [Mimir](https://nornscode.com/mimir) — A Slack bot that answers product questions, built on Norns.
 
 It ingests GitHub repos, Google Docs, Figma files, and arbitrary URLs, and keeps persistent memory in Postgres with pgvector. [Read more](/posts/introducing-mimir/).
+
+## Norns
+
+[Norns](https://nornscode.com) — An open-source durable execution runtime for AI agents on the BEAM.
+
+Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/).
 
 ## Chronicle
 
