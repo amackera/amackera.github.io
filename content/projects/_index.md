@@ -9,6 +9,12 @@ title: "Projects"
 
 Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/).
 
+## Mimir
+
+[Mimir](https://nornscode.com/mimir) — A Slack bot that answers product questions, built on Norns.
+
+It ingests GitHub repos, Google Docs, Figma files, and arbitrary URLs, and keeps persistent memory in Postgres with pgvector. [Read more](/posts/introducing-mimir/).
+
 ## Chronicle
 
 [Chronicle](https://chronicle.work) — A shared history for your recurring meetings.
