@@ -24,4 +24,6 @@ shipped production code in almost a dozen programming languages,
 worked with some exceptional people, and produced software used by
 millions worldwide.
 
+The best way to reach me is by [email](mailto:anson@mackeracher.com).
+
 ![Anson](IMG_1740-med.png#small "Anson")

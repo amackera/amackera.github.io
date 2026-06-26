@@ -3,6 +3,8 @@ date: 2026-03-20
 title: "CV"
 ---
 
+Reach me by [email](mailto:anson@mackeracher.com) or on [LinkedIn](https://www.linkedin.com/in/amackera).
+
 ## Experience
 
 ### [Hyper](https://callhyper.com)
