@@ -73,9 +73,9 @@ instantly, before the agent ran a single step:
 AnthropicException - 'tool_call_id'
 ```
 
-That the first turn worked and the second didn't was the whole clue: the
-first turn runs on messages still in memory, and the second reloads the
-conversation from Postgres first.
+The difference is where the messages come from. The first turn uses
+what's still in memory; the second reloads the conversation from
+Postgres first.
 
 On reload, `normalize_messages` rebuilt each message as just `role` and
 `content`, dropping `tool_calls` on the assistant turns and
@@ -83,10 +83,9 @@ On reload, `normalize_messages` rebuilt each message as just `role` and
 paired back to the tool call it answers, and that linkage was gone. The
 fix carries those fields through the reload path.
 
-The lesson rhymes with the first one: anything that survives a round trip
-through storage has to come back whole. "Works in memory" and "works
-after reload" are different claims, and only the second one is
-durability.
+The lesson rhymes with the first one: state that round-trips through
+storage has to come back whole. "Works in memory" and "works after
+reload" are different claims — and durability is the second one.
 
 ## Context inheritance
 
@@ -111,11 +110,10 @@ LLM in a loop.
 
 ## Also in v0.3
 
-There's a telemetry dashboard at `/telemetry`, and every page has a 
-dark mode toggle now.
+There's a telemetry dashboard at `/telemetry`, and we have a dark mode
+now!
 
 ![The Norns dashboard in dark mode showing a completed run's event log](norns-dark-mode.png)
 
-The [repo](https://github.com/nornscode/norns) is public. If you're
-building agents on Norns and hit any bugs or jank,
-[open an issue](https://github.com/nornscode/norns/issues)!
+The [repo](https://github.com/nornscode/norns) is public. Hit a bug or
+some jank? [Open an issue](https://github.com/nornscode/norns/issues)!
