@@ -1,17 +1,17 @@
 +++
 title = 'Norns v0.3'
 date = 2026-07-03T09:30:00-07:00
-description = 'Sub-agent context inheritance, and three bugs found by running Mimir in production'
+description = 'Sub-agent context inheritance, and four bugs found by running Mimir in production'
 images = ['/posts/norns-v0.3/norns-v0.3-og.png']
 draft = false
 +++
 
 [Norns v0.3](https://github.com/nornscode/norns/releases/tag/v0.3) is
 out. The biggest new feature is sub-agent context inheritance, but the
-part I want to write about is the bug fixes. All three came from
+part I want to write about is the bug fixes. All four came from
 running [Mimir](/posts/introducing-mimir/) in production.
 
-## Three bugs from production
+## Four bugs from production
 
 ### Stale agent config
 
@@ -63,6 +63,30 @@ Now, if the final turn is blank, it walks backward and uses the last
 assistant message with real content. Every agent on the runtime gets
 this for free, instead of every system prompt having to say "always
 restate your final answer."
+
+### Reloading a thread dropped its tool IDs
+
+The first message in a tool-using thread worked. The second one failed
+instantly, before the agent ran a single step:
+
+```
+AnthropicException - 'tool_call_id'
+```
+
+That the first turn worked and the second didn't was the whole clue: the
+first turn runs on messages still in memory, and the second reloads the
+conversation from Postgres first.
+
+On reload, `normalize_messages` rebuilt each message as just `role` and
+`content`, dropping `tool_calls` on the assistant turns and
+`tool_call_id` on the tool turns. Anthropic needs every tool result
+paired back to the tool call it answers, and that linkage was gone. The
+fix carries those fields through the reload path.
+
+The lesson rhymes with the first one: anything that survives a round trip
+through storage has to come back whole. "Works in memory" and "works
+after reload" are different claims, and only the second one is
+durability.
 
 ## Context inheritance
 
