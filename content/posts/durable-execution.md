@@ -64,14 +64,12 @@ where it stopped, and it picks up from there.
 
 ## Durability in an Agentic World
 
-So where does this leave us?
-
 AI agents are moving off your laptop and into the cloud. They're
 coordinating tasks, calling APIs, making decisions, and operating
 autonomously for extended periods.
 
-These agents run on infrastructure that fails in all the usual ways.
-VMs get preempted. Containers get evicted. Networks partition. An
+These agents run on infrastructure that fails in all the usual ways:
+VMs get preempted, containers get evicted, networks partition. An
 agent could be calling an LLM, waiting for human approval, or writing
 to a database when the rug gets pulled out.
 

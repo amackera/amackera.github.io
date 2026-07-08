@@ -7,7 +7,7 @@ I've held a variety of roles at organizations of different sizes, but by far the
 
 Of course, like all things in life, there's a trade-off. A fast pace means high pressure. Momentum means higher expectations. Excitement also means uncertainty. Potential for huge wins necessarily means potential for huge loss.
 
-Most of the time, all we hear about are the success stories. This survivor bias has created a skewed perspective on being early-stage employee in the public eye. I have thoughts, and this post is my attempt to explain the reality of what it's like.
+Most of the time, all we hear about are the success stories. This survivor bias has created a skewed perspective on being an early-stage employee in the public eye. I have thoughts, and this post is my attempt to explain the reality of what it's like.
 
 ## The Rocket Ship Metaphor
 
@@ -23,9 +23,9 @@ Every day in a startup is a new day. New problems. New customers. New scaling is
 
 Yes, you might get a "vacation" after the team is big enough that you aren't needed all the time. But that vacation will include you stressing about how things are going without you, your unconscious mind will be solving code problems from last week, or your vacation will literally be interrupted by some "unsolvable" problem back in the office. Founders never get a break from thinking about their baby, but you as an early employee won't get a break either.
 
-Often times you will be told you need to "scale yourself" in accordance with the new demands of whatever stage the company is at. Usually that means hiring somebody to do the job that you used to do. That means replacing yourself with someone *better* than you at that thing. Scaling yourself is inherently robbing you of your explicit utility to the company. To stay relevant you must reinvent yourself, constantly.
+Oftentimes you will be told you need to "scale yourself" in accordance with the new demands of whatever stage the company is at. Usually that means hiring somebody to do the job that you used to do. That means replacing yourself with someone *better* than you at that thing. Scaling yourself is inherently robbing you of your explicit utility to the company. To stay relevant you must reinvent yourself, constantly.
 
-If you ever stop reinventing yourself, even for a short time (a few weeks, a few months), you will demonstrate your inability to scale and you *will* be replaced. If you're "irreplaceable", efforts will begin to make you redundant. The startup and it's founders are not your friends. They need you to do a thing, and if you can't do the thing, you're not going to last long.
+If you ever stop reinventing yourself, even for a short time (a few weeks, a few months), you will demonstrate your inability to scale and you *will* be replaced. If you're "irreplaceable", efforts will begin to make you redundant. The startup and its founders are not your friends. They need you to do a thing, and if you can't do the thing, you're not going to last long.
 
 That's just the harsh reality. Loyalty means nothing when you're getting a paycheck. Assume your hard work has already been compensated for, and never rest on your laurels.
 

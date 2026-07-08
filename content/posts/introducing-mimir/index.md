@@ -69,7 +69,7 @@ normalizing whatever flavour of garbage HTML someone's CMS produced.
 Python has mature tooling for this. Elixir doesn't. No point
 reimplementing the wheel.
 
-This is the whole point of a worker architecture. The orchestrator
+The orchestrator
 is the language you want for fault tolerance and concurrency. The
 worker is whatever language the problem calls for. For Mimir, that's
 Python. For someone else's agent, it might be TypeScript or Rust.
@@ -92,7 +92,5 @@ ask it things, watch it respond to others. The
 [repo](https://github.com/nornscode/norns-mimir-agent) has setup
 instructions if you want it in your own Slack.
 
-A reference agent is a worked example. You read it when you're
-deciding whether the runtime can hold up under your own agent. What
-I want to see is people pointing Norns at agents that look nothing
-like Mimir and telling me what cracks.
+What I want to see is people pointing Norns at agents that look
+nothing like Mimir and telling me what cracks.

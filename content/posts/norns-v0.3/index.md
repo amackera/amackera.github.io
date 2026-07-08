@@ -25,7 +25,7 @@ database, but nothing read the database again. The fix is to re-read
 the agent record before every LLM dispatch, so an update takes effect
 on the next step.
 
-This is a general lesson about long-lived processes, anything that
+This is a general lesson about long-lived processes: anything that
 loads config once at startup needs an invalidation story. 
 Downstream, Mimir had been monkey-patching a
 private SDK method in two places just to route around this. That
@@ -85,7 +85,7 @@ fix carries those fields through the reload path.
 
 The lesson rhymes with the first one: state that round-trips through
 storage has to come back whole. "Works in memory" and "works after
-reload" are different claims — and durability is the second one.
+reload" are different claims, and durability is the second one.
 
 ## Context inheritance
 
@@ -104,9 +104,7 @@ primitive, so the behaviour is identical either way.
 The important part is that the handoff is durable. Context is
 persisted in the run's input, so it survives a crash and resume. It's
 also recorded on the spawn event, so you can look at the event log
-and see exactly what a parent handed to a child. This is the point of
-Norns: agents that spawn and resume other agents durably, not just an
-LLM in a loop.
+and see exactly what a parent handed to a child.
 
 ## Also in v0.3
 

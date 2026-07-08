@@ -44,10 +44,8 @@ understood fault tolerance at a fundamental level.
 The Erlang VM (the BEAM) was built in the late '80s at Ericsson to
 run telephone switches. The requirements were: handle massive
 concurrency, never go down, recover from failures automatically, and
-allow live upgrades without dropping calls. Sound familiar?
-
-Replace "telephone switches" with "AI agents" and the overlap is
-striking.
+allow live upgrades without dropping calls. Swap "telephone switches"
+for "AI agents" and it's the same list.
 
 Most languages treat crashes as something to prevent. Forced to write
 defensive code, you wrap everything in try/catch, and check every
@@ -55,7 +53,7 @@ return value. You build walls around any potential failure.
 
 Erlang took the opposite approach: crashes are normal. Don't prevent
 them. Let them happen. The system's job is to recover, not to avoid
-failure. This isn't negligence, it's a design philosophy. Instead of
+failure. Instead of
 writing code that tries to handle every possible error state (and
 inevitably misses some), you write code for the happy path and let the
 runtime handle recovery.
@@ -76,8 +74,7 @@ lightweight (a few hundred bytes of initial memory) with isolated
 heaps and per-process garbage collection.  You can run hundreds of
 thousands of them on a single machine without even thinking about
 it. The BEAM's scheduler preemptively multiplexes them across CPU
-cores, so no single process can starve the others.  The concurrency
-model isn't bolted on, it's built in.
+cores, so no single process can starve the others.
 
 This is the runtime Ericsson built for telephone switches that
 couldn't go down. It's the right substrate for agents that cannot
@@ -87,11 +84,11 @@ fail. That's what Norns runs on.
 
 Norns is built for a specific class of agent: long-running,
 tool-using agents with side effects and real failure-recovery needs.
-The kind that sends emails, charges credit cards, dispatches
-emergency services — where a dropped run or a duplicated action isn't
-a minor inconvenience, it's a bug with consequences.
+The kind that sends emails, charges credit cards, and dispatches
+emergency services, where a dropped run or a duplicated action has
+real consequences.
 
-At it's core, Norns is a pure state machine. It never calls an LLM or
+At its core, Norns is a pure state machine. It never calls an LLM or
 executes a tool. Its only job is to manage state transitions and
 persist events. Every step of execution (LLM requests, responses, tool
 calls, results, checkpoints) is written to an event log. If an agent
@@ -170,9 +167,8 @@ you find.
 
 In my last post, I said that AI agents need the same durability
 guarantees we've spent decades building for data. The BEAM is where
-those guarantees live. Not as a library you import, but as the runtime
-itself. Fault tolerance isn't a feature of Norns — it's a property of
-the VM it runs on. Norns just makes it accessible for agents.
+those guarantees live, in the runtime itself rather than a library
+you import. Norns just makes them accessible for agents.
 
 When someone dials 911, the agent that answers needs to be as reliable
 as the telephone network it replaced. It's fitting that the technology

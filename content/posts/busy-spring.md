@@ -19,7 +19,7 @@ Hyper is a natural fit. Motorola already has deep roots in public
 safety: Computer Aided Dispatch, call handling, radios, and a whole
 plethora of first responder tech. Adding AI-powered voice agents to
 that stack makes a lot of sense. It's an opportunity to scale what
-we've built to a much broader audience. Real impact on real people.
+we've built to a much broader audience.
 
 The transition has been interesting. I'm learning how
 enterprise-scale organizations operate. The size and complexity of
@@ -31,10 +31,10 @@ find ways to move things forward. Hyper has a good home there.
 
 On the side, I've been working on something I'm calling
 **[Hermod](https://github.com/nornscode/hermod)**, a pull request
-"shepherd." In the age of AI-assisted development, writing code is
-getting easier every day. It's no longer about producing the code,
-it's about managing the queue of pull requests that need review,
-revision, and merging. Hermod is my attempt to help folks stay on top of that.
+"shepherd." Writing code is getting easier every
+day with AI assistance, but somebody still has to manage the queue of
+pull requests that need review, revision, and merging. Hermod is my
+attempt to help folks stay on top of that.
 I'm not ready to announce it properly yet, it's still very much in
 progress. But I wanted to make a note of it here.
 
