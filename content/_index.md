@@ -31,8 +31,8 @@ millions worldwide.
   design.
 - [Being an Early Employee](/posts/being-an-early-employee/) - the
   startup rocket ship metaphor, with more blast radius than romance.
-- [Mimir in Production](/posts/introducing-mimir/) - a Slack agent
-  that finished my request while my laptop was closed on a ferry.
+- [Mimir in Production](/posts/introducing-mimir/) - the Slack agent
+  that rode the ferry with me and finished the job anyway.
 
 The best way to reach me is by [email](mailto:anson@mackeracher.com).
 
