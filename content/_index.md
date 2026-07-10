@@ -32,7 +32,7 @@ millions worldwide.
 - [Being an Early Employee](/posts/being-an-early-employee/) - the
   startup rocket ship metaphor, with more blast radius than romance.
 - [Mimir in Production](/posts/introducing-mimir/) - the Slack agent
-  that rode the ferry with me and finished the job anyway.
+  that rode the ferry with me and answered after my laptop woke up.
 
 The best way to reach me is by [email](mailto:anson@mackeracher.com).
 
