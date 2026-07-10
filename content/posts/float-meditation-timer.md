@@ -1,5 +1,5 @@
 +++
-title = 'Introducing Float Meditation Timer'
+title = 'Just a Meditation Timer'
 date = 2026-01-25T13:12:50-08:00
 draft = false
 +++

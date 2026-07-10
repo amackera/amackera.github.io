@@ -1,5 +1,5 @@
 +++
-title = 'Introducing Norns'
+title = 'Agents That Pick Up Where They Left Off'
 date = 2026-03-31T16:06:47-07:00
 description = 'An open-source durable execution runtime for AI agents on the BEAM'
 draft = false

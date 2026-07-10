@@ -24,6 +24,16 @@ shipped production code in almost a dozen programming languages,
 worked with some exceptional people, and produced software used by
 millions worldwide.
 
+## Start here
+
+- [Four Bugs From Production in Norns v0.3](/posts/norns-v0.3/) - what
+  real users and real failures taught me about durable agent runtime
+  design.
+- [Being an Early Employee](/posts/being-an-early-employee/) - the
+  startup rocket ship metaphor, with more blast radius than romance.
+- [Mimir in Production](/posts/introducing-mimir/) - a Slack agent
+  that survived a laptop sleep because the run lived somewhere else.
+
 The best way to reach me is by [email](mailto:anson@mackeracher.com).
 
 ![Anson](IMG_1740-med.png#small "Anson")

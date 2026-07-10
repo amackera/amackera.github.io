@@ -1,5 +1,5 @@
 +++
-title = 'Introducing Chronicle: A Shared History of What Matters'
+title = 'Stop Starting Every Meeting From Scratch'
 date = 2026-02-27T10:00:00-08:00
 draft = false
 +++

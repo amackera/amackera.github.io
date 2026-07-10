@@ -1,5 +1,5 @@
 +++
-title = 'Introducing Shotify'
+title = 'Code Screenshots From Your Editor'
 date = 2025-12-15T09:46:08-08:00
 draft = false
 +++

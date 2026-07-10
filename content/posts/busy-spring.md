@@ -1,5 +1,5 @@
 ---
-title: "A Busy Spring"
+title: "Hyper, Hermod, and a Busy Spring"
 date: 2026-06-08
 draft: false
 ---
