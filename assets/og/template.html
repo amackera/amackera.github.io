@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    position: relative;
+    overflow: hidden;
+    background: #0a0c0f;
+    font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: #e7ecf2;
+  }
+  .glow1 {
+    position: absolute; inset: 0;
+    background: radial-gradient(70% 70% at 100% 18%, rgba(212,164,90,0.16) 0%, rgba(212,164,90,0.04) 55%, rgba(212,164,90,0) 100%);
+  }
+  .glow2 {
+    position: absolute; inset: 0;
+    background: radial-gradient(60% 60% at 0% 100%, rgba(124,168,209,0.06) 0%, rgba(124,168,209,0) 100%);
+  }
+  .wrap { position: absolute; inset: 0; padding: 84px 90px; display: flex; }
+  .left { display: flex; flex-direction: column; height: 100%; flex: 1; }
+
+  .brand { display: flex; align-items: center; gap: 20px; }
+  .brand img { height: 52px; width: auto; filter: url(#logo-white); }
+  .brand span { font-size: 42px; font-weight: 500; letter-spacing: 0.02em; }
+
+  .headline { margin-top: auto; }
+  .headline h1 { font-size: 92px; font-weight: 500; line-height: 1.02; letter-spacing: -0.02em; }
+  .headline .ver { color: #d4a45a; }
+  .sub { margin-top: 26px; font-size: 30px; color: #aab2bd; letter-spacing: 0.01em; }
+
+  .foot { margin-top: auto; display: flex; align-items: center; gap: 16px; font-size: 22px; color: #6b7480; letter-spacing: 0.06em; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; background: #d4a45a; }
+
+  .card {
+    position: absolute; right: 90px; top: 214px;
+    width: 430px;
+    background: #0f1217; border: 1px solid #1e242d; border-radius: 14px;
+    padding: 30px 30px;
+    font-size: 21px; line-height: 1.72;
+  }
+  .card .sp { height: 16px; }
+  .cmt { color: #5c6470; }
+  .atom { color: #d4a45a; }
+  .str { color: #6cc38f; }
+  .mut { color: #aab2bd; }
+  .fn { color: #7ca8d1; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="logo-white" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -0.333 -0.333 -0.333 0 1"/>
+    </filter>
+  </svg>
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="wrap">
+    <div class="left">
+      <div class="brand">
+        <img src="norns-glyph.png" alt="">
+        <span>norns</span>
+      </div>
+      <div class="headline">
+        <h1>Elixir SDK<br><span class="ver">v0.1</span></h1>
+        <div class="sub">Durable agents on the BEAM.</div>
+      </div>
+      <div class="foot"><span class="dot"></span>open source · mit · hex.pm</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div><span class="cmt"># mix.exs</span></div>
+    <div><span class="mut">{</span><span class="atom">:norns_sdk</span><span class="mut">,</span> <span class="str">"~&gt; 0.1"</span><span class="mut">}</span></div>
+    <div class="sp"></div>
+    <div><span class="cmt"># stream a run</span></div>
+    <div><span class="fn">Client</span><span class="mut">.stream(c,</span> <span class="str">"bot"</span><span class="mut">,</span> <span class="str">"hi"</span><span class="mut">)</span></div>
+    <div class="sp"></div>
+    <div><span class="mut">{</span><span class="atom">:norns_event</span><span class="mut">, pid,</span></div>
+    <div>&nbsp;&nbsp;<span class="mut">%</span><span class="fn">StreamEvent</span><span class="mut">{</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="atom">type:</span> <span class="str">"completed"</span><span class="mut">}}</span></div>
+  </div>
+</body>
+</html>
