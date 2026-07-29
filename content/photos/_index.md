@@ -2,6 +2,7 @@
 date: 2024-09-18
 title: "Photos"
 ---
+![Anson](IMG_1740.png#full "Anson")
 ![VW Bug](DSCF0928.png#full "VW Bug")
 ![Ruins](DSCF1059.png#full "Ruins")
 ![Statue](DSCF1113.png#full "Statue")

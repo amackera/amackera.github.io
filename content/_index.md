@@ -6,34 +6,25 @@ title: "Anson MacKeracher"
 I create software systems that operate reliably under unreliable
 conditions.
 
-I've led engineering teams and built large-scale services in critical
-domains including public safety, climate tech, education, legal, finance, and
-enterprise support. Previous roles include Engineering at
-[Hyper](https://callhyper.com), Head of Engineering at [Mangrove
-Systems](https://mangrovesystems.com) and [Ada](https://ada.cx), CTO
-at [LegalMate](https://legalmate.co), and Chief Architect and VP
-Technology at [Top Hat](https://tophat.com).
+I've led engineering teams and built large-scale services across
+public safety, climate tech, legal, and education, most recently at
+[Hyper](https://callhyper.com). My focus is scalable, fault-tolerant
+cloud infrastructure: real-time web systems, ML models, batch
+pipelines, and durable execution.
 
-My expertise is in designing and deploying scalable, fault-tolerant
-cloud services: transactional and real-time web systems, online
-ML models, high-throughput batch pipelines, and durable execution.
-
-A University of Waterloo ECE graduate, I've since relocated to
-Vancouver on Canada's west coast. Over the last 15+ years, I've
-shipped production code in almost a dozen programming languages,
-worked with some exceptional people, and produced software used by
-millions worldwide.
+A Waterloo ECE grad now in Vancouver, I've shipped production code in
+almost a dozen languages over 15+ years, on software used by
+millions. Full history on my [CV](/cv).
 
 ## Start here
 
-- [Four Bugs From Production in Norns v0.3](/posts/norns-v0.3/) - what
-  real users and real failures taught me about durable agent runtime
-  design.
-- [Being an Early Employee](/posts/being-an-early-employee/) - the
+- **[Norns](/posts/norns-v0.3/)** - an open-source durable execution
+  runtime for AI agents on the BEAM. If an agent crashes mid-run, it
+  replays the event log and picks up right where it left off.
+- **[Mimir](/posts/introducing-mimir/)** - a Slack bot built on Norns
+  that answers product questions, with persistent memory over your
+  docs, code, and design files.
+- **[Being an Early Employee](/posts/being-an-early-employee/)** - the
   startup rocket ship metaphor, with more blast radius than romance.
-- [Mimir in Production](/posts/introducing-mimir/) - the Slack agent
-  that slept through the ferry ride.
 
 The best way to reach me is by [email](mailto:anson@mackeracher.com).
-
-![Anson](IMG_1740-med.png#small "Anson")

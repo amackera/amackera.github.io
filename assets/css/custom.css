@@ -86,3 +86,12 @@ figcaption {
   font-size: var(--caption-font-size);
   text-align: center;
 }
+
+/* The /photos gallery mixes landscape and portrait shots. The generic figure
+   sizing above (tuned for wide in-post screenshots) lets a portrait photo's
+   aspect-ratio blow its box out to ~950px tall in a 780px-wide column. Cap
+   gallery images specifically so portrait shots don't dominate the page. */
+.list-container .img-container {
+  max-height: 640px;
+}
+
