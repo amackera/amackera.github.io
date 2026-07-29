@@ -1,0 +1,19 @@
+{{- /*
+  Resolves the OG/Twitter image(s) for a page: an explicit Params.images
+  front-matter override wins (hand-built cards keep working unchanged);
+  otherwise posts get a branded card generated automatically.
+
+  Param: a Page.
+  Returns: []string of image paths (front-matter convention: root-relative,
+  passed through absURL by callers), or nil.
+*/ -}}
+{{- $page := . -}}
+{{- $images := $page.Params.images -}}
+{{- if not $images -}}
+  {{- if and $page.IsPage (eq $page.Section "posts") -}}
+    {{- with partial "og/generate.html" $page -}}
+      {{- $images = slice .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $images -}}

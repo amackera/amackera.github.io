@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    position: relative;
+    overflow: hidden;
+    background: #0a0c0f;
+    font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: #e7ecf2;
+  }
+  .glow1 {
+    position: absolute; inset: 0;
+    background: radial-gradient(70% 70% at 100% 18%, rgba(212,164,90,0.16) 0%, rgba(212,164,90,0.04) 55%, rgba(212,164,90,0) 100%);
+  }
+  .glow2 {
+    position: absolute; inset: 0;
+    background: radial-gradient(60% 60% at 0% 100%, rgba(124,168,209,0.06) 0%, rgba(124,168,209,0) 100%);
+  }
+
+  .brand {
+    position: absolute; left: 90px; top: 84px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .brand img { height: 52px; width: auto; filter: url(#logo-white); }
+  .brand span { font-size: 42px; font-weight: 500; letter-spacing: 0.02em; }
+
+  .foot {
+    position: absolute; left: 90px; bottom: 84px;
+    display: flex; align-items: center; gap: 16px;
+    font-size: 22px; color: #6b7480; letter-spacing: 0.06em;
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; background: #d4a45a; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="logo-white" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -0.333 -0.333 -0.333 0 1"/>
+    </filter>
+  </svg>
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="brand">
+    <img src="norns-glyph.png" alt="">
+    <span>norns</span>
+  </div>
+  <div class="foot"><span class="dot"></span>open source · mit · hex.pm</div>
+</body>
+</html>

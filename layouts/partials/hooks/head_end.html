@@ -1,7 +1,7 @@
 {{ partial "plausible_head.html" . }}
 
-{{- /* Twitter/X large-image card. Only emitted when the page sets an OG image. */ -}}
-{{- with .Params.images }}
+{{- /* Twitter/X large-image card. Only emitted when the page has an OG image (explicit or auto-generated). */ -}}
+{{- with partialCached "og/image.html" . .RelPermalink }}
 {{- $img := index . 0 | absURL }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $.Title }}">

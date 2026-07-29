@@ -1,0 +1,56 @@
+{{- /*
+  Greedy word-wrap for monospace text, sized in pixels.
+
+  Params (dict):
+    text     (string) the text to wrap
+    size     (int)    font size in px
+    maxWidth (int)    available width in px
+    maxLines (int)    optional cap; overflow is truncated with an ellipsis
+                       on the last kept line (0/omitted = unlimited)
+
+  Returns: []string, one entry per line.
+*/ -}}
+{{- $text := .text -}}
+{{- $size := .size -}}
+{{- $maxWidth := .maxWidth -}}
+{{- $maxLines := .maxLines | default 0 -}}
+
+{{- /* JetBrains Mono average advance width is ~0.6 of its point size; 0.62 leaves headroom. */ -}}
+{{- $charW := mul (float $size) 0.62 -}}
+{{- $budget := int (math.Floor (div (float $maxWidth) $charW)) -}}
+{{- if lt $budget 1 -}}{{- $budget = 1 -}}{{- end -}}
+
+{{- $words := split $text " " -}}
+{{- $lines := slice -}}
+{{- $current := "" -}}
+
+{{- range $w := $words -}}
+  {{- if eq $current "" -}}
+    {{- $current = $w -}}
+  {{- else -}}
+    {{- $candidate := printf "%s %s" $current $w -}}
+    {{- if le (strings.RuneCount $candidate) $budget -}}
+      {{- $current = $candidate -}}
+    {{- else -}}
+      {{- $lines = $lines | append $current -}}
+      {{- $current = $w -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if ne $current "" -}}
+  {{- $lines = $lines | append $current -}}
+{{- end -}}
+
+{{- if and (gt $maxLines 0) (gt (len $lines) $maxLines) -}}
+  {{- $head := first (sub $maxLines 1) $lines -}}
+  {{- $lastLine := index $lines (sub $maxLines 1) -}}
+  {{- $ellW := sub $budget 1 -}}
+  {{- if lt $ellW 1 -}}{{- $ellW = 1 -}}{{- end -}}
+  {{- $cut := $lastLine -}}
+  {{- if gt (strings.RuneCount $lastLine) $ellW -}}
+    {{- $cut = strings.Substr $lastLine 0 $ellW -}}
+  {{- end -}}
+  {{- $lines = $head | append (printf "%s…" $cut) -}}
+{{- end -}}
+
+{{- return $lines -}}

@@ -1,0 +1,82 @@
+{{- /*
+  Generates a branded 1200x630 OG/Twitter card for a post from its
+  Title/Description, stamped onto the shared assets/og/bg.png background
+  (see assets/og/README.md for the brand + how bg.png itself is rendered).
+
+  Param: a Page.
+  Returns: an image resource (1200x630), or nil if required assets are missing.
+*/ -}}
+{{- $page := . -}}
+{{- $title := $page.Title -}}
+{{- $desc := $page.Description -}}
+{{- if not $desc -}}{{- $desc = $page.Site.Params.description -}}{{- end -}}
+
+{{- $bg := resources.Get "og/bg.png" -}}
+{{- $fontHead := resources.Get "fonts/JetBrainsMono/JetBrainsMono-SemiBold.ttf" -}}
+{{- $fontSub := resources.Get "fonts/JetBrainsMono/JetBrainsMono-Regular.ttf" -}}
+
+{{- $out := "" -}}
+{{- if and $bg $fontHead $fontSub $title -}}
+
+  {{- /* All coordinates are in bg.png's native 2x space (2400x1260 for a 1200x630 card). */ -}}
+  {{- $padX := 180 -}}
+  {{- $maxWidth := 2040 -}}
+  {{- $headlineBottomY := 744 -}}
+  {{- $subTopY := 800 -}}
+
+  {{- /* Pick the largest headline size that wraps the title to <=2 lines. */ -}}
+  {{- $chosenSize := 0 -}}
+  {{- $chosenLines := slice -}}
+  {{- range $size := slice 144 128 112 96 84 72 64 -}}
+    {{- if eq $chosenSize 0 -}}
+      {{- $lines := partial "og/wrap.html" (dict "text" $title "size" $size "maxWidth" $maxWidth) -}}
+      {{- if le (len $lines) 2 -}}
+        {{- $chosenSize = $size -}}
+        {{- $chosenLines = $lines -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if eq $chosenSize 0 -}}
+    {{- $chosenSize = 64 -}}
+    {{- $chosenLines = partial "og/wrap.html" (dict "text" $title "size" 64 "maxWidth" $maxWidth "maxLines" 2) -}}
+  {{- end -}}
+
+  {{- $headLH := int (mul (float $chosenSize) 1.08) -}}
+  {{- $headBlockH := mul $headLH (len $chosenLines) -}}
+  {{- $headStartY := sub $headlineBottomY $headBlockH -}}
+
+  {{- $img := $bg -}}
+  {{- range $i, $line := $chosenLines -}}
+    {{- $y := add $headStartY (mul $i $headLH) -}}
+    {{- $img = $img.Filter (images.Text $line (dict
+      "color" "#e7ecf2"
+      "size" $chosenSize
+      "font" $fontHead
+      "x" $padX
+      "y" $y
+      "alignx" "left"
+      "aligny" "top"
+    )) -}}
+  {{- end -}}
+
+  {{- $subSize := 52 -}}
+  {{- $subLH := int (mul (float $subSize) 1.35) -}}
+  {{- $subLines := partial "og/wrap.html" (dict "text" $desc "size" $subSize "maxWidth" $maxWidth "maxLines" 2) -}}
+  {{- range $i, $line := $subLines -}}
+    {{- $y := add $subTopY (mul $i $subLH) -}}
+    {{- $img = $img.Filter (images.Text $line (dict
+      "color" "#aab2bd"
+      "size" $subSize
+      "font" $fontSub
+      "x" $padX
+      "y" $y
+      "alignx" "left"
+      "aligny" "top"
+    )) -}}
+  {{- end -}}
+
+  {{- $final := $img.Resize "1200x630" -}}
+  {{- $slug := $page.File.ContentBaseName -}}
+  {{- $out = resources.Copy (printf "og/generated/%s-og.png" $slug) $final -}}
+{{- end -}}
+{{- return $out -}}
