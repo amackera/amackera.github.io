@@ -2,6 +2,7 @@
 title: "2026, Year of the Linux Desktop"
 date: 2026-01-11
 draft: false
+description: "Fighting an Nvidia flicker bug on a fresh Arch install, and the real Linux desktop win: a Steam Deck."
 ---
 
 The year: 2026. The situation: installing Linux on a desktop

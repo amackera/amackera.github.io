@@ -2,6 +2,7 @@
 title = 'Stop Starting Every Meeting From Scratch'
 date = 2026-02-27T10:00:00-08:00
 draft = false
+description = 'Chronicle gives recurring 1:1s and team syncs a shared history, so you stop re-explaining context every meeting.'
 +++
 
 I have a lot of recurring meetings. 1:1s with my manager, team syncs,

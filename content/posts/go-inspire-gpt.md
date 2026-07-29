@@ -2,6 +2,7 @@
 title: "Go Inspire GPT"
 date: 2023-02-28
 draft: false
+description: "What GPT actually does under the hood, and why the internet's data, not the model, is what's worth protecting."
 ---
 
 ChatGPT has people very excited. Academics are imagining their hard-wrought papers being generated with a simple prompt. Programmers are watching machines begin to write their own code. Writers and creatives are staring at the results of a ChatGPT prompt with amazement, delight, and terror.

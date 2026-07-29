@@ -2,6 +2,7 @@
 title = 'Just a Meditation Timer'
 date = 2026-01-25T13:12:50-08:00
 draft = false
+description = 'A meditation timer with no accounts, subscriptions, or gamification. Just a timer, on the App Store, free.'
 +++
 
 I built a meditation timer app called

@@ -1,6 +1,7 @@
 ---
 title: "Being an Early Employee"
 date: 2024-09-20
+description: "The startup rocket ship metaphor, scaling yourself out of your own job, and knowing when to quit."
 ---
 
 I've held a variety of roles at organizations of different sizes, but by far the most success I've experienced is in the environment of an early-stage, fast-growing startup company. It's an exciting place to operate, the momentum and fast pace feels amazing to be around. The sense of progress and "building something" is palpable, optimism is in the air.

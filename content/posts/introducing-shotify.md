@@ -2,6 +2,7 @@
 title = 'Code Screenshots From Your Editor'
 date = 2025-12-15T09:46:08-08:00
 draft = false
+description = 'Shotify turns code into clean, syntax-highlighted screenshots straight from Emacs, VS Code, Neovim, or the CLI.'
 +++
 
 I often want to share small bits of code that are clean, syntax

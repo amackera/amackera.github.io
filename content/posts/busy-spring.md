@@ -2,6 +2,7 @@
 title: "Hyper, Hermod, and a Busy Spring"
 date: 2026-06-08
 draft: false
+description: "Hyper's acquisition by Motorola Solutions, and a first note on Hermod, a pull request shepherd built on Norns."
 ---
 
 The last few months have been busy. A lot happened, so I wanted to
