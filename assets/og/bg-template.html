@@ -23,10 +23,8 @@
 
   .brand {
     position: absolute; left: 90px; top: 84px;
-    display: flex; align-items: center; gap: 20px;
+    font-size: 44px; font-weight: 500; letter-spacing: 0.02em;
   }
-  .brand img { height: 52px; width: auto; filter: url(#logo-white); }
-  .brand span { font-size: 42px; font-weight: 500; letter-spacing: 0.02em; }
 
   .foot {
     position: absolute; left: 90px; bottom: 84px;
@@ -37,17 +35,9 @@
 </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <filter id="logo-white" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -0.333 -0.333 -0.333 0 1"/>
-    </filter>
-  </svg>
   <div class="glow1"></div>
   <div class="glow2"></div>
-  <div class="brand">
-    <img src="norns-glyph.png" alt="">
-    <span>norns</span>
-  </div>
-  <div class="foot"><span class="dot"></span>open source · mit · hex.pm</div>
+  <div class="brand">Anson MacKeracher</div>
+  <div class="foot"><span class="dot"></span>mackeracher.com</div>
 </body>
 </html>
