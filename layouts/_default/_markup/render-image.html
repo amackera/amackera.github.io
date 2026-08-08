@@ -43,9 +43,11 @@ and build the img class string as "img-tag1 img-tag2 ..."
 {{ $classes = printf "%s img-%s" $classes $tag}}
 {{ end }}
 
-{{/* .Width/.Height only exist on raster image resources, not SVGs */}}
+{{/* .Width/.Height only exist on raster image resources, not SVGs.
+     Checked via ResourceType/MediaType rather than
+     reflect.IsImageResourceProcessable, which needs a newer Hugo than CI runs. */}}
 {{ $sized := false }}
-{{ with $imgResource }}{{ $sized = reflect.IsImageResourceProcessable . }}{{ end }}
+{{ with $imgResource }}{{ $sized = and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}{{ end }}
 
 {{/* Use the computed classes on the rendered figure */}}
 <figure class="{{ $classes }}">
