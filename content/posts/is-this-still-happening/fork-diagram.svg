@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 716" font-family="'JetBrains Mono','SFMono-Regular',Menlo,Consolas,monospace" role="img" aria-label="Before the crash, the parent's event log points at child run 7f3c, which is running. After crash and replay, the pending launch_agent call is dispatched again, forking a second child run 9d21 while run 7f3c keeps running with nothing waiting on it.">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7ca8d1"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d4a45a"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7480"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="716" rx="12" fill="#0a0c0f"/>
+
+  <!-- ================= Panel 1: before the crash ================= -->
+  <rect x="12" y="12" width="736" height="300" rx="10" fill="#0e1216" stroke="#232b36"/>
+  <text x="32" y="44" font-size="12" letter-spacing="2" fill="#6b7480">BEFORE THE CRASH</text>
+
+  <!-- parent event log -->
+  <rect x="32" y="64" width="330" height="224" rx="8" fill="#12171e" stroke="#2a3340"/>
+  <text x="50" y="92" font-size="13" fill="#aab2bd">parent run &#183; event log</text>
+  <line x1="32" y1="104" x2="362" y2="104" stroke="#2a3340"/>
+  <text x="50" y="132" font-size="13" fill="#e7ecf2">llm_response</text>
+  <text x="50" y="150" font-size="12" fill="#6b7480">&#160;&#160;calls launch_agent</text>
+  <text x="50" y="182" font-size="13" fill="#7ca8d1">subagent_launched</text>
+  <text x="50" y="200" font-size="12" fill="#d4a45a">&#160;&#160;child_run_id: run_7f3c</text>
+  <text x="50" y="238" font-size="13" fill="#6b7480">&#8230; awaiting tool_result</text>
+
+  <!-- child run box -->
+  <rect x="474" y="128" width="254" height="104" rx="8" fill="#12171e" stroke="#7ca8d1"/>
+  <text x="492" y="158" font-size="12" fill="#6b7480">child run</text>
+  <text x="492" y="182" font-size="15" fill="#e7ecf2">run_7f3c</text>
+  <text x="492" y="206" font-size="13" fill="#7ca8d1">status: running</text>
+
+  <!-- arrow: event log -> child -->
+  <line x1="362" y1="180" x2="468" y2="180" stroke="#7ca8d1" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="415" y="170" font-size="12" fill="#6b7480" text-anchor="middle">spawned</text>
+
+  <!-- ================= Panel 2: after crash + replay ================= -->
+  <rect x="12" y="328" width="736" height="376" rx="10" fill="#0e1216" stroke="#232b36"/>
+  <text x="32" y="360" font-size="12" letter-spacing="2" fill="#6b7480">AFTER THE CRASH &#183; REPLAY</text>
+
+  <!-- replayed parent event log -->
+  <rect x="32" y="380" width="330" height="268" rx="8" fill="#12171e" stroke="#2a3340"/>
+  <text x="50" y="408" font-size="13" fill="#aab2bd">parent run &#183; replayed</text>
+  <line x1="32" y1="420" x2="362" y2="420" stroke="#2a3340"/>
+  <text x="50" y="448" font-size="13" fill="#e7ecf2">llm_response</text>
+  <text x="50" y="466" font-size="12" fill="#6b7480">&#160;&#160;calls launch_agent</text>
+  <text x="50" y="498" font-size="13" fill="#7ca8d1">subagent_launched</text>
+  <text x="50" y="516" font-size="12" fill="#6b7480">&#160;&#160;child_run_id: run_7f3c</text>
+  <text x="50" y="554" font-size="13" fill="#e7ecf2">launch_agent &#183; no result</text>
+  <text x="50" y="580" font-size="13" fill="#d4a45a">&#8594; dispatch it again</text>
+
+  <!-- abandoned child -->
+  <rect x="474" y="404" width="254" height="118" rx="8" fill="none" stroke="#6b7480" stroke-dasharray="5 4"/>
+  <text x="492" y="434" font-size="12" fill="#6b7480">child run</text>
+  <text x="492" y="458" font-size="15" fill="#6b7480">run_7f3c</text>
+  <text x="492" y="482" font-size="13" fill="#6b7480">still running &#183;</text>
+  <text x="492" y="500" font-size="13" fill="#6b7480">nothing is waiting on it</text>
+
+  <!-- dangling reference arrow -->
+  <line x1="362" y1="496" x2="468" y2="470" stroke="#6b7480" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow-muted)"/>
+  <text x="415" y="444" font-size="12" fill="#6b7480" text-anchor="middle">the log still</text>
+  <text x="415" y="460" font-size="12" fill="#6b7480" text-anchor="middle">points here</text>
+
+  <!-- forked child -->
+  <rect x="474" y="562" width="254" height="118" rx="8" fill="#12171e" stroke="#d4a45a"/>
+  <text x="492" y="592" font-size="12" fill="#6b7480">child run</text>
+  <text x="492" y="616" font-size="15" fill="#e7ecf2">run_9d21</text>
+  <text x="492" y="640" font-size="13" fill="#d4a45a">same work &#183;</text>
+  <text x="492" y="658" font-size="13" fill="#d4a45a">started from scratch</text>
+
+  <!-- fork arrow -->
+  <line x1="362" y1="576" x2="468" y2="612" stroke="#d4a45a" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+  <text x="412" y="612" font-size="12" fill="#d4a45a" text-anchor="middle">fork</text>
+</svg>
