@@ -104,16 +104,9 @@ agent would call `launch_agent` constantly, turning delegation into
 the hot path. A failure mode that's rare when one run in a thousand
 delegates becomes routine when every run does.
 
-Seven new tests confirm the bugs and the fixes. They also caught a
-bug in the fix itself. A child broadcasts `:agent_resumed` when it
-comes back up, and since no parent had ever been the one resuming a
-child before, the parent had no handler for that message and crashed
-in the middle of its own recovery. Everything above is
-[one commit](https://github.com/nornscode/norns/commit/3c777377466af0cbb07cdb2b60b0b81a792ebdb4),
-and it shipped in
-[Norns v0.4](https://github.com/nornscode/norns/releases/tag/v0.4)
-alongside run lineage, depth limits, and sub-agent authorization. That
-trio is the rest of the groundwork for agents that launch agents.
+The fix shipped in
+[Norns v0.4](https://github.com/nornscode/norns/releases/tag/v0.4),
+alongside run lineage, depth limits, and sub-agent authorization.
 
 Depth limits bound recursion, but they say nothing about fan-out. One
 agent launching fifty children at depth 1 costs far more than a chain
