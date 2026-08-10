@@ -101,9 +101,8 @@ needed to name the run. Now they do.
 None of this came from a bug report. I found it while designing an
 agent whose job is to build, run, and evaluate other agents. That
 agent would call `launch_agent` constantly, turning delegation into
-the hot path. The
-feature you haven't built yet is a load test on the code you already
-have.
+the hot path. A failure mode that's rare when one run in a thousand
+delegates becomes routine when every run does.
 
 Seven new tests confirm the bugs and the fixes. They also caught a
 bug in the fix itself. A child broadcasts `:agent_resumed` when it
