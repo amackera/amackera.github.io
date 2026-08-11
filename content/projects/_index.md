@@ -13,7 +13,7 @@ It ingests GitHub repos, Google Docs, Figma files, and arbitrary URLs, and keeps
 
 [Norns](https://nornscode.com) — An open-source durable execution runtime for AI agents on the BEAM.
 
-Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/).
+Built in Elixir on the Erlang VM. If an agent crashes mid-run, Norns replays its event log and picks up where it left off. [Read more](/posts/introducing-norns/), or see the [full series](/norns/).
 
 ## Chronicle
 

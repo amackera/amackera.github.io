@@ -26,7 +26,8 @@ durable execution runtime for AI agents, built in Elixir on the BEAM.
 If an agent crashes mid-run, it replays the event log and picks up
 where it left off. The latest post in the series covers what crash
 recovery gets wrong when agents delegate to other agents:
-[Is This Still Happening?](/posts/is-this-still-happening/)
+[Is This Still Happening?](/posts/is-this-still-happening/) All seven
+posts are collected on the [Norns series page](/norns/).
 
 **Leading.** [Being an Early Employee](/posts/being-an-early-employee/)
 is the startup rocket ship metaphor, with more blast radius than
