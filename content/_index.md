@@ -24,9 +24,9 @@ on my [CV](/cv).
 **Building.** [Norns](/posts/introducing-norns/) is an open-source
 durable execution runtime for AI agents, built in Elixir on the BEAM.
 If an agent crashes mid-run, it replays the event log and picks up
-where it left off. The latest post in the series is
-[Is This Still Happening?](/posts/is-this-still-happening/), on what
-crash recovery gets wrong when agents delegate to other agents.
+where it left off. The latest post in the series covers what crash
+recovery gets wrong when agents delegate to other agents:
+[Is This Still Happening?](/posts/is-this-still-happening/)
 
 **Leading.** [Being an Early Employee](/posts/being-an-early-employee/)
 is the startup rocket ship metaphor, with more blast radius than
