@@ -2,6 +2,8 @@
 title = 'Kill the Worker, Keep the Run'
 date = 2026-04-08T17:27:31-07:00
 description = 'A short demo of Norns recovering from worker crashes mid-execution'
+series = 'norns'
+seriesBlurb = "A 30-second demo. The worker dies twice and the agent finishes the job anyway."
 draft = false
 +++
 

@@ -2,6 +2,8 @@
 title = 'Mimir in Production'
 date = 2026-04-29T14:48:12-07:00
 description = 'A Slack bot that answers product questions, built on Norns'
+series = 'norns'
+seriesBlurb = "The first reference agent, a Slack bot with persistent memory, and the run that survived my laptop closing on a ferry."
 images = ['/posts/introducing-mimir/event-log.png']
 draft = false
 +++

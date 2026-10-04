@@ -2,6 +2,8 @@
 title = 'Four Bugs From Production in Norns v0.3'
 date = 2026-07-03T09:30:00-07:00
 description = 'Sub-agent context inheritance, and four bugs found by running Mimir in production'
+series = 'norns'
+seriesBlurb = "Sub-agent context inheritance, and four bugs that running Mimir in production shook out of the runtime."
 images = ['/posts/norns-v0.3/norns-v0.3-og.png']
 draft = false
 +++

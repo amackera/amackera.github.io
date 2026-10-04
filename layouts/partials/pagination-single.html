@@ -1,0 +1,40 @@
+{{- /* Overrides themes/typo/layouts/partials/pagination-single.html so the
+       end of a post gets: series navigation (if any), the theme's previous
+       and next links, and a short follow-along line. */ -}}
+{{ partial "series-nav.html" . }}
+
+{{ if or .NextInSection .PrevInSection }}
+<div class="single-pagination">
+    <hr />
+    <div class="flexnowrap">
+        <div class="single-pagination-prev">
+            {{ with .PrevInSection }}
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="single-pagination-next">
+            {{ with .NextInSection }}
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <hr />
+</div>
+{{ end }}
+
+{{- $rss := "" }}{{ with site.GetPage "posts" }}{{ with .OutputFormats.Get "rss" }}{{ $rss = .RelPermalink }}{{ end }}{{ end }}
+{{- $mail := "" }}{{ range site.Params.social }}{{ if eq .name "Email" }}{{ $mail = .url }}{{ end }}{{ end }}
+<p class="follow-line">
+  I post about once a month.
+  {{ if $rss }}Follow along by <a href="{{ $rss }}">RSS</a>{{ if $mail }}, or {{ end }}{{ end }}{{ with $mail }}<a href="{{ . }}">email me</a>{{ end }}.
+</p>

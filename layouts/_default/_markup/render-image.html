@@ -1,61 +1,55 @@
 {{/*
 Site override of themes/typo/layouts/_default/_markup/render-image.html.
-Identical except the .Width/.Height calls are guarded with
-reflect.IsImageResource, so SVG page resources (which don't support those
-methods) render instead of failing the build.
+
+Differences from the theme:
+- Raster images that are page or site resources are converted to WebP and
+  capped at 1600px wide (2x the 780px column), which cuts most screenshot
+  pages by 70-80%. SVGs and GIFs are served untouched.
+- .Width/.Height are only read on raster resources, so SVG page resources
+  render instead of failing the build.
+
+Must stay compatible with the Hugo version in .github/workflows/hugo.yaml.
 */}}
 {{- $u := urls.Parse .Destination -}}
 {{- $url := $u.String -}}
-{{- $imgResource := .Page.Scratch.Get "typoNilVariable" -}}
+{{- $img := "" -}}
 {{- if not $u.IsAbs -}}
   {{- $path := strings.TrimPrefix "./" $u.Path -}}
-  {{/* Check if this is a page bundle or standalone page */}}
-  {{- if .PageInner.Resources -}}
-    {{- $imgResource = .PageInner.Resources.Get $path -}}
-  {{- else if (or .PageInner.Parent .PageInner.Parent.Resources) -}}
-    {{- $imgResource = .PageInner.Parent.Resources.Get $path -}}
-  {{- end -}}
-  {{- $imgResource := or $imgResource (resources.Get $path) -}}
-  {{- with $imgResource -}}
-    {{- $url = .RelPermalink -}}
-    {{- with $u.RawQuery -}}
-      {{- $url = printf "%s?%s" $url . -}}
+  {{- with .PageInner.Resources.Get $path }}{{ $img = . }}{{ end -}}
+  {{- if not $img }}{{ with .PageInner.Parent }}{{ with .Resources.Get $path }}{{ $img = . }}{{ end }}{{ end }}{{ end -}}
+  {{- if not $img }}{{ with resources.Get $path }}{{ $img = . }}{{ end }}{{ end -}}
+  {{- with $img -}}
+    {{- $raster := and (eq .ResourceType "image") (ne .MediaType.SubType "svg") (ne .MediaType.SubType "gif") -}}
+    {{- if $raster -}}
+      {{- if gt .Width 1600 -}}
+        {{- $img = .Resize "1600x webp q82" -}}
+      {{- else -}}
+        {{- $img = .Process "webp q82" -}}
+      {{- end -}}
     {{- end -}}
-    {{- with $u.Fragment -}}
-      {{- $url = printf "%s#%s" $url . -}}
-    {{- end -}}
+    {{- $url = $img.RelPermalink -}}
+    {{- with $u.RawQuery }}{{ $url = printf "%s?%s" $url . }}{{ end -}}
+    {{- with $u.Fragment }}{{ $url = printf "%s#%s" $url . }}{{ end -}}
   {{- end -}}
 {{- end -}}
 
-{{/* Split URL at # */}}
+{{/* Everything after "#" in the destination is a space of style tags, e.g.
+     image.png#full -> class "img-full" */}}
 {{ $url = $url | safeURL }}
 {{ $file_name_array := split $url "#" }}
-
-{{/*
-Iterate over all tags, which are in pos 1 to len array - 1,
-and build the img class string as "img-tag1 img-tag2 ..."
-*/}}
-
 {{ $classes := "" }}
-
 {{ range $idx := seq (sub (len $file_name_array) 1) }}
 {{ $tag := index $file_name_array $idx }}
 {{ $classes = printf "%s img-%s" $classes $tag}}
 {{ end }}
 
-{{/* .Width/.Height only exist on raster image resources, not SVGs.
-     Checked via ResourceType/MediaType rather than
-     reflect.IsImageResourceProcessable, which needs a newer Hugo than CI runs. */}}
 {{ $sized := false }}
-{{ with $imgResource }}{{ $sized = and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}{{ end }}
+{{ with $img }}{{ $sized = and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}{{ end }}
 
-{{/* Use the computed classes on the rendered figure */}}
 <figure class="{{ $classes }}">
-
-    <div class="img-container" {{ if $sized }}style="--w: {{ $imgResource.Width }}; --h: {{ $imgResource.Height }};"{{ end }}>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ if $sized }}width="{{ $imgResource.Width }}" height="{{ $imgResource.Height }}"{{ end }}>
+    <div class="img-container" {{ if $sized }}style="--w: {{ $img.Width }}; --h: {{ $img.Height }};"{{ end }}>
+        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ if $sized }}width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}>
     </div>
-
     {{ with .Title }}
     <div class="caption-container">
         <figcaption> {{ . | markdownify}} </figcaption>

@@ -1,0 +1,28 @@
+{{- /* "Part N of M" box for posts that carry a `series` front matter key.
+       Renders nothing until a series has at least two posts. Series titles and
+       landing pages live in data/series.toml. */ -}}
+{{- with .Params.series -}}
+{{- $key := . -}}
+{{- $pages := (where site.RegularPages "Params.series" $key).ByDate -}}
+{{- $n := len $pages -}}
+{{- if gt $n 1 -}}
+  {{- $meta := index site.Data.series $key -}}
+  {{- $title := $key | title -}}
+  {{- $link := "" -}}
+  {{- with $meta }}{{ with .title }}{{ $title = . }}{{ end }}{{ with .page }}{{ $link = . }}{{ end }}{{ end -}}
+  {{- $i := 0 -}}
+  {{- range $idx, $p := $pages }}{{ if $p.Eq $ }}{{ $i = $idx }}{{ end }}{{ end -}}
+  <aside class="series-nav">
+    <p class="series-label">
+      Part {{ add $i 1 }} of {{ $n }} in the
+      {{ if $link }}<a href="{{ $link }}">{{ $title }} series</a>{{ else }}{{ $title }} series{{ end }}
+    </p>
+    {{- if gt $i 0 }}{{ with index $pages (sub $i 1) }}
+    <p>Previous: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+    {{- end }}{{ end }}
+    {{- if lt $i (sub $n 1) }}{{ with index $pages (add $i 1) }}
+    <p>Next: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+    {{- end }}{{ end }}
+  </aside>
+{{- end -}}
+{{- end -}}

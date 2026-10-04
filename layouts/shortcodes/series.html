@@ -1,0 +1,11 @@
+{{- /* {{< series "norns" >}} renders every post with that `series` key, oldest
+       first, using each post's `seriesBlurb` (falling back to `description`). */ -}}
+{{- $key := .Get 0 -}}
+{{- $pages := (where site.RegularPages "Params.series" $key).ByDate -}}
+<ol class="series-list">
+{{- range $pages }}
+  <li><p><strong><a href="{{ .RelPermalink }}">{{ .Title }}</a></strong>
+    ({{ .Date.Format "Jan 2006" }}).
+    {{ with (or .Params.seriesBlurb .Description) }}{{ . | markdownify }}{{ end }}</p></li>
+{{- end }}
+</ol>

@@ -2,6 +2,8 @@
 title = 'Agents That Pick Up Where They Left Off'
 date = 2026-03-31T16:06:47-07:00
 description = 'An open-source durable execution runtime for AI agents on the BEAM'
+series = 'norns'
+seriesBlurb = "Introducing Norns, and why the Erlang VM is the right substrate for agents that can't fail."
 draft = false
 +++
 

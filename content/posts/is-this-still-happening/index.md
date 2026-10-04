@@ -2,6 +2,8 @@
 title = 'Is This Still Happening?'
 date = 2026-08-08T09:00:00-07:00
 description = "Norns' crash recovery re-dispatched pending sub-agent launches, forking the work instead of retrying it. Three bugs, one mistake."
+series = 'norns'
+seriesBlurb = "Crash recovery was forking sub-agent work instead of reattaching to it. Fixed and shipped in v0.4."
 draft = false
 +++
 

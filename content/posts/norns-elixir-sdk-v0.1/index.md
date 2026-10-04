@@ -3,6 +3,8 @@ title = 'Norns Elixir SDK, v0.1'
 date = 2026-07-21T09:00:00-07:00
 draft = false
 description = "Norns' second SDK: an Elixir worker and client for building durable agents on the BEAM."
+series = 'norns'
+seriesBlurb = "The second official SDK, for building durable agents on the BEAM."
 images = ['/posts/norns-elixir-sdk-v0.1/norns-elixir-sdk-v0.1-og.png']
 +++
 

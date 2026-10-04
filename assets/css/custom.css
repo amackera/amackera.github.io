@@ -95,3 +95,37 @@ figcaption {
   max-height: 640px;
 }
 
+
+/* Series navigation at the end of a post (layouts/partials/series-nav.html) */
+.series-nav {
+  margin-top: 3rem;
+  padding: 0.75rem 1.2rem;
+  border-left: 3px solid var(--content-secondary);
+}
+
+.series-nav p {
+  margin: 0.3rem 0;
+}
+
+.series-nav .series-label {
+  font-family: var(--font-mono);
+  font-size: small;
+}
+
+/* Follow-along line under the previous/next links */
+.follow-line {
+  font-family: var(--font-mono);
+  font-size: small;
+  color: var(--content-secondary);
+  text-align: center;
+  margin: 1.5rem 0 2.5rem;
+}
+
+/* 404 page */
+.lost h1 {
+  margin-bottom: 1.5rem;
+}
+
+.lost .post-line {
+  margin-bottom: 0.5rem;
+}

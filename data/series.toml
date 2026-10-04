@@ -1,0 +1,10 @@
+# Post series. A post joins one with `series = "<key>"` in its front matter and
+# can carry an optional `seriesBlurb` used by the {{< series >}} shortcode.
+# `page` is the series landing page, if there is one.
+
+[norns]
+title = "Norns"
+page = "/norns/"
+
+[missive]
+title = "Missive"

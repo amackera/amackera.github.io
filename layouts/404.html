@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main role="main" class="lost">
+  <h1>Not here.</h1>
+
+  <p>Whatever used to be at this address isn't anymore. Either it moved
+  or I broke a link. Sorry about that.</p>
+
+  <p>Recent posts, in case one of these is what you were after:</p>
+
+  {{ range first 5 (where site.RegularPages "Section" "posts") }}
+    {{ partial "post-entry.html" . }}
+  {{ end }}
+
+  {{- $mail := "" }}{{ range site.Params.social }}{{ if eq .name "Email" }}{{ $mail = .url }}{{ end }}{{ end }}
+  <p>Otherwise, head <a href="/">home</a>, browse <a href="/posts/">all
+  the posts</a>{{ with $mail }}, or <a href="{{ . }}">email me</a> and tell me
+  what you were looking for{{ end }}.</p>
+</main>
+{{ end }}
