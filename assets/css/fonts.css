@@ -1,0 +1,53 @@
+/* Overrides themes/typo/assets/css/fonts.css. Same faces, but font-display is
+   `optional` instead of `swap`: if a font isn't ready within the browser's short
+   block period it uses the fallback for that page view and never swaps, so text
+   doesn't reflow after it has painted. The common faces are preloaded in
+   layouts/partials/hooks/head_start.html so they're almost always ready. */
+
+@font-face {
+    font-family: 'Literata';
+    src: url('/fonts/Literata/Literata-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Literata';
+    src: url('/fonts/Literata/Literata-LightItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Literata';
+    src: url('/fonts/Literata/Literata-SemiBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Literata';
+    src: url('/fonts/Literata/Literata-SemiBoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Monaspace';
+    src: url('/fonts/Monaspace/MonaspaceArgon-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Monaspace';
+    src: url('/fonts/Monaspace/MonaspaceArgon-SemiBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: optional;
+}

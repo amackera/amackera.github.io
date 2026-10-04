@@ -1,0 +1,7 @@
+{{- /* Preload the fonts used on every page so they download alongside the HTML
+       instead of after the stylesheet. Together with font-display: optional in
+       assets/css/fonts.css this stops text from painting in the fallback font
+       and then swapping. */ -}}
+<link rel="preload" href="/fonts/Literata/Literata-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Literata/Literata-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Monaspace/MonaspaceArgon-Regular.woff" as="font" type="font/woff" crossorigin>
