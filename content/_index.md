@@ -9,11 +9,12 @@ conditions.
 I've spent 15+ years building those systems and leading the teams
 that build them. I co-founded [LegalMate](https://legalmate.co) and
 spent four years as its CTO, ran engineering at [Ada](https://ada.cx)
-and [Mangrove Systems](https://mangrovesystems.com), and most
-recently helped build [Hyper](https://callhyper.com), acquired by
-Motorola Solutions in 2026. The common thread is software that isn't
-allowed to fail: 911 call handling, legal automation, carbon
-accounting.
+and [Mangrove Systems](https://mangrovesystems.com), and helped build
+[Hyper](https://callhyper.com), acquired by Motorola Solutions in
+2026. Now I'm at [CoPlane](https://coplane.com), building AI agents
+for the enterprise back office. The common thread is software that
+isn't allowed to fail: 911 call handling, legal automation, carbon
+accounting, finance operations.
 
 A Waterloo ECE grad now in Vancouver, I've shipped production code in
 almost a dozen languages, on software used by millions. Full history
