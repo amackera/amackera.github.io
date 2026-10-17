@@ -7,12 +7,24 @@ Reach me by [email](mailto:anson@mackeracher.com) or on [LinkedIn](https://www.l
 
 ## Experience
 
+### [CoPlane](https://coplane.com)
+
+_AI-native back-office automation for essential enterprises: agents, business rules, and human approvals layered on top of existing ERPs._
+
+___Engineering___, Oct 2026 - Present
+
+- Building AI agents that automate finance and operations workflows
+- Forward-deployed engineering with enterprise customers
+- Python, TypeScript, PostgreSQL
+
 ### [Hyper](https://callhyper.com)
 
-_Automating non-emergency 9-1-1 calls to speed up response times and save lives._
+_Automating non-emergency 9-1-1 calls to speed up response times and save lives. Acquired by [Motorola Solutions](https://www.motorolasolutions.com) in April 2026._
 
-___Engineering___, Sept 2025 - Present
+___Engineering___, Sept 2025 - Oct 2026
 
+- Co-inventor of a state-of-the-art, patent-pending computer-use AI system
+- Running 24/7 in production with some of North America's busiest PSAPs
 - AI Engineering and deployment of agentic call handling solution
 - Leading a team of exceptional Elixir and Python engineers
 - Overseeing security and compliance, including SOC2
