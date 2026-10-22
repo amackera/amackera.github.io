@@ -16,9 +16,11 @@ for the enterprise back office. The common thread is software that
 isn't allowed to fail: 911 call handling, legal automation, carbon
 accounting, finance operations.
 
-A Waterloo ECE grad now in Vancouver, I've shipped production code in
-almost a dozen languages, on software used by millions. Full history
-on my [CV](/cv).
+I studied electrical and computer engineering at the University of
+Waterloo, spent ten years in Toronto, and now live on Bowen Island,
+a short ferry ride from Vancouver. I've shipped production code in
+almost a dozen languages and built products used by millions. Full
+history on my [CV](/cv).
 
 ## Start here
 
