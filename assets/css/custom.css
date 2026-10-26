@@ -1,30 +1,424 @@
-/* Typography defaults: justified on larger screens for cleaner columns */
+/* Site overrides on top of the typo theme. Loaded after main.css and before
+   colors/default.css, so colour tokens are set on body (more specific than
+   the theme's :root) and everything else just wins by order. */
+
+/* ---------- Palette: warm paper, teal links ---------- */
+
+body {
+  --background: #faf7f1;
+  --content-primary: #26231f;
+  --content-secondary: #6f6861;
+  --code-background: #f1ece3;
+  --code-border: #e2dacc;
+  --rule: #e2dacc;
+  --accent: #1f6f67;
+  --accent-soft: rgba(31, 111, 103, 0.08);
+}
+
+body.dark {
+  --background: #171513;
+  --content-primary: #e4ddd3;
+  --content-secondary: #978f84;
+  --code-background: #211e1a;
+  --code-border: #332e28;
+  --rule: #332e28;
+  --accent: #7fc3b9;
+  --accent-soft: rgba(127, 195, 185, 0.1);
+}
+
+/* ---------- Frame and type scale ---------- */
+
+:root {
+  --main-width: 780px;
+  --prose-width: 100%;
+  --p-line-height: 1.6em;
+  --h1-font-size: 2.4em;
+  --h2-font-size: 1.5em;
+  --hx-font-size: 1.2em;
+  --h1-margin-top: 1.5rem;
+  --h2-margin-top: 2.5rem;
+  --h2-margin-bottom: 1rem;
+}
+
+html {
+  font-size: clamp(16px, 0.45vw + 13px, 18px);
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+h1 a, h2 a, .card-title a, .note-list a, .header-title a, .header-menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 a:hover, .card-title a:hover, .note-list a:hover {
+  color: var(--accent);
+}
+
+a.quiet {
+  color: var(--content-secondary);
+}
+
+/* Left-aligned, ragged right. */
 article p,
-.home-page-content p {
-  text-align: justify;
-  text-justify: inter-word;
+.home-intro p {
+  text-align: left;
   hyphens: auto;
 }
 
-/* Mobile safe-area padding (iOS notch/status bar) */
+/* Prose stays at a reading width; the frame can be wider than the text. */
+.single-content,
+.single-summary,
+.home-intro,
+.audience,
+.toc,
+.backlinks,
+.series-nav,
+.list-container > p {
+  max-width: var(--prose-width);
+}
+
+/* ---------- Header: wordmark and nav on one row ---------- */
+
+.header {
+  padding-top: var(--header-top-gap);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.header p.header-title {
+  font-family: var(--font-body);
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+  padding: 0;
+  font-size: 0.95em;
+  color: var(--content-secondary);
+}
+
+.header-menu a:hover {
+  color: var(--accent);
+}
+
+.header-menu a.current {
+  color: var(--accent);
+}
+
+/* ---------- Homepage ---------- */
+
+.home-intro p:first-child {
+  font-size: 1.7em;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.015em;
+  hyphens: none;
+}
+
+.home-section {
+  margin-top: 3.5rem;
+}
+
+.home-section h2 {
+  margin-bottom: 0.25rem;
+}
+
+.section-blurb {
+  color: var(--content-secondary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-width: var(--prose-width);
+}
+
+.section-more {
+  font-size: 0.9em;
+  margin-top: 1.25rem;
+}
+
+.home-outro {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- Cards ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2.5rem;
+}
+
+/* Text-only cards (cardThumbs = false) get a hairline on top so the grid
+   still reads as a grid. */
+.card-grid .card:not(:has(.card-thumb)) {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-list .card {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.card-list .card:not(:has(.card-thumb)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.card-thumb {
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--code-background);
+  border: 1px solid var(--rule);
+  margin-bottom: 0.9rem;
+}
+
+.card-list .card-thumb {
+  margin-bottom: 0;
+}
+
+.card-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 252;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-thumb img {
+  transform: scale(1.02);
+}
+
+.card p {
+  margin: 0;
+}
+
+.card-meta,
+.kind,
+.card-date,
+.single-kind,
+.backlinks-label,
+.audience-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--content-secondary);
+}
+
+.card-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem !important;
+}
+
+.kind a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.card-desc {
+  color: var(--content-secondary);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-top: 0.4rem !important;
+}
+
+/* Note list and project list */
+
+.project-sub {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.9em;
+  color: var(--content-secondary);
+}
+
+.project-sub a {
+  color: var(--content-secondary);
+}
+
+.note-list,
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: var(--prose-width);
+}
+
+.note-list li,
+.project-list li {
+  margin-left: 0;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+
+.note-list li:last-child,
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.note-list .card-date {
+  margin-left: 0.5rem;
+}
+
+.project-list li > a:first-child {
+  font-weight: bold;
+}
+
+/* ---------- Single post ---------- */
+
+.single-intro-container {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.single-kind {
+  margin: 0 0 0.75rem;
+}
+
+.single-title {
+  font-size: 2.6em;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.single-summary {
+  font-size: 1.15em;
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.single-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.audience {
+  margin: 0 0 2rem;
+  padding: 0.8rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+
+.audience p {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.audience-label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.backlinks {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.backlinks-label {
+  margin: 0 0 0.5rem;
+}
+
+.backlinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.backlinks li {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.backlinks-desc {
+  color: var(--content-secondary);
+  font-size: 0.95em;
+}
+
+/* Posts list page */
+
+.list-container h1 {
+  margin-bottom: 0.25rem;
+}
+
+.list-container > p {
+  color: var(--content-secondary);
+  margin-top: 0;
+}
+
+/* ---------- Mobile ---------- */
+
 @media (max-width: 768px) {
   body {
     padding-top: env(safe-area-inset-top, 0);
   }
 
-  article p,
-  .home-page-content p {
-    text-align: justify;
-    text-justify: inter-word;
-    hyphens: auto;
+  .card-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  article h1,
-  .post-title,
-  .page-title {
-    margin-top: 0.75rem;
+  .card-list .card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .card-list .card-thumb {
+    max-width: 320px;
+  }
+
+  .single-title {
+    font-size: 2em;
+  }
+
+  .home-intro p:first-child {
+    font-size: 1.25em;
   }
 }
+
+/* ---------- Kept from before: quotes, figures, photos, series, 404 ---------- */
 
 /* Preserve line breaks in blockquotes (for poetry) */
 blockquote p {
@@ -87,20 +481,19 @@ figcaption {
   text-align: center;
 }
 
-/* The /photos gallery mixes landscape and portrait shots. The generic figure
-   sizing above (tuned for wide in-post screenshots) lets a portrait photo's
-   aspect-ratio blow its box out to ~950px tall in a 780px-wide column. Cap
-   gallery images specifically so portrait shots don't dominate the page. */
+/* The /photos gallery mixes landscape and portrait shots. Cap gallery images
+   so portrait shots don't dominate the page. */
 .list-container .img-container {
   max-height: 640px;
 }
-
 
 /* Series navigation at the end of a post (layouts/partials/series-nav.html) */
 .series-nav {
   margin-top: 3rem;
   padding: 0.75rem 1.2rem;
-  border-left: 3px solid var(--content-secondary);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
 }
 
 .series-nav p {
@@ -126,6 +519,6 @@ figcaption {
   margin-bottom: 1.5rem;
 }
 
-.lost .post-line {
-  margin-bottom: 0.5rem;
+.lost .card-list {
+  margin: 1.5rem 0 2.5rem;
 }

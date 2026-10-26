@@ -1,25 +1,66 @@
 {{ define "main" }}
-  <main role="main">
-    <header class="home-page-header">
-      <!-- <h1>{{ .Title }}</h1> -->
-      {{ with .Params.subtitle }}
-        <span class="subtitle">{{ . }}</span>
-      {{ end }}
-    </header>
-    <div class="home-page-content">
-      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-      {{ .Content }}
-      {{ with site.Params.social }}
-      <div class="social-icons">
-        {{- range . }}
-        <a href="{{ trim .url " " | safeURL }}" target="_blank"
-           rel="noopener noreferrer me"
-           title="{{ (.title | default .name) | title }}">
-          {{ partial "svg.html" . }}
-        </a>
-        {{- end }}
-      </div>
-      {{ end }}
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+{{- $essays := (where $posts "Params.genre" "essay").ByDate.Reverse -}}
+{{- $notes := (where $posts "Params.genre" "note").ByDate.Reverse -}}
+<div class="home">
+  <div class="home-intro">
+    {{ .Content }}
+  </div>
+
+  <section class="home-section">
+    <h2>Posts</h2>
+    <p class="section-blurb">Stay awhile and listen...</p>
+    <div class="card-grid">
+      {{- range first 4 $essays }}
+      {{ partial "post-card.html" . }}
+      {{- end }}
     </div>
-  </main>
+    {{- with $notes }}
+    <ul class="note-list">
+      {{- range first 8 . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="card-date">{{ .Date.Format "Jan 2006" }}</span></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    <p class="section-more"><a href="/posts/">All posts</a></p>
+  </section>
+
+  {{- with site.Data.projects.project }}
+  <section class="home-section">
+    <h2><a href="/projects/">Building</a></h2>
+    <p class="section-blurb">Things I've shipped. Simple on purpose.</p>
+    <ul class="project-list">
+      {{- range . }}
+      <li>
+        <a href="{{ .url }}">{{ .name }}</a>. {{ .blurb | markdownify }}{{ with .post }} <a class="quiet" href="{{ . }}">Read more</a>{{ end }}
+        {{- with .series }}
+        {{- $pages := (where site.RegularPages "Params.series" .).ByDate }}
+        {{- $meta := index site.Data.series . }}
+        {{- with $pages }}
+        {{- $latest := index .Reverse 0 }}
+        <span class="project-sub">Latest post: <a href="{{ $latest.RelPermalink }}">{{ $latest.Title }}</a>{{ with $meta }}{{ with .page }} · <a href="{{ . }}">The series</a>{{ end }}{{ end }}</span>
+        {{- end }}
+        {{- end }}
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  <div class="home-outro">
+    {{- $mail := "" }}{{ range site.Params.social }}{{ if eq .name "Email" }}{{ $mail = .url }}{{ end }}{{ end }}
+    <p>The best way to reach me is by <a href="{{ $mail }}">email</a>.</p>
+    {{ with site.Params.social }}
+    <div class="social-icons">
+      {{- range . }}
+      <a href="{{ trim .url " " | safeURL }}" target="_blank"
+         rel="noopener noreferrer me"
+         title="{{ (.title | default .name) | title }}">
+        {{ partial "svg.html" . }}
+      </a>
+      {{- end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

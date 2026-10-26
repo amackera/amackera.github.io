@@ -7,9 +7,11 @@
 
   <p>Recent posts, in case one of these is what you were after:</p>
 
+  <div class="card-list">
   {{ range first 5 (where site.RegularPages "Section" "posts") }}
-    {{ partial "post-entry.html" . }}
+    {{ partial "post-card.html" . }}
   {{ end }}
+  </div>
 
   {{- $mail := "" }}{{ range site.Params.social }}{{ if eq .name "Email" }}{{ $mail = .url }}{{ end }}{{ end }}
   <p>Otherwise, head <a href="/">home</a>, browse <a href="/posts/">all

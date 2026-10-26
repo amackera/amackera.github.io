@@ -1,0 +1,9 @@
+{{- /* "Norns series" (linked) above the title of a post that belongs to a
+       series. Nothing otherwise. Pass a Page. */ -}}
+{{- with .Params.series -}}
+  {{- $meta := index site.Data.series . -}}
+  {{- $title := . | title -}}
+  {{- $link := "" -}}
+  {{- with $meta }}{{ with .title }}{{ $title = . }}{{ end }}{{ with .page }}{{ $link = . }}{{ end }}{{ end -}}
+  <span class="kind">{{ if $link }}<a href="{{ $link }}">{{ $title }} series</a>{{ else }}{{ $title }} series{{ end }}</span>
+{{- end -}}

@@ -2,9 +2,11 @@
 title: "Code That Cannot Fail"
 date: 2026-03-25
 draft: false
-description: "Why voice agents answering 911 calls need the same durability guarantees we've spent decades building for data."
+description: "Why AI for 911, software for legal proceedings, and financial operations all require similar durability guarantees."
 series: norns
 seriesBlurb: "Why 911 calls and legal cases need durable execution, and the lineage from journaling file systems to Temporal."
+genre: "essay"
+audience: "Anyone putting an LLM in front of real users. No Elixir and no Norns internals, mostly history."
 ---
 
 At [Hyper](https://callhyper.com), we're building voice agents that

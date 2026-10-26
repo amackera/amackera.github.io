@@ -5,6 +5,8 @@ description = 'An open-source durable execution runtime for AI agents on the BEA
 series = 'norns'
 seriesBlurb = "Introducing Norns, and why the Erlang VM is the right substrate for agents that can't fail."
 draft = false
+genre = 'project'
+audience = "People building AI agents who want them to survive a crash. Elixir helps but isn't required."
 +++
 
 [Norns](https://github.com/amackera/norns) is a durable execution

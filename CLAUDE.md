@@ -41,3 +41,26 @@ at build time — nothing to do for a new post beyond writing `title` and
 the brand tokens, and how to hand-build a custom card (as
 `norns-v0.3`, `introducing-mimir`, and `norns-elixir-sdk-v0.1` do) when you
 want more control than the auto-generated headline + subtitle layout.
+
+## Post front matter
+
+Beyond `title`, `date`, `description`, every post carries a `genre`: `essay`,
+`note`, or `project`. Only the homepage uses it: essays get cards, notes get a
+title list below them, and project posts are left to the Building section,
+which comes from `data/projects.toml`. It isn't shown anywhere. Don't call
+this key `kind` or `type`: both are reserved by Hugo and 0.128 (the CI
+version) refuses `kind`.
+
+Optional keys:
+
+- `audience`: one sentence shown in an "Assumed audience" box under the title.
+- `lastmod`: shown as "Updated <date>" next to the written date when it
+  differs from `date`. Only set it for real revisions, not typo fixes.
+- `series` / `seriesBlurb`: see data/series.toml.
+
+Every post page ends with a "Mentioned in" list, built at compile time from
+other pages whose markdown links to it (layouts/partials/backlinks.html).
+
+Card thumbnails on the homepage and /posts are the post's social card
+(layouts/partials/thumb.html), so a hand-built `images` card shows there too.
+`cardThumbs = false` in hugo.toml turns them off.

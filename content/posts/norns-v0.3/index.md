@@ -6,6 +6,8 @@ series = 'norns'
 seriesBlurb = "Sub-agent context inheritance, and four bugs that running Mimir in production shook out of the runtime."
 images = ['/posts/norns-v0.3/norns-v0.3-og.png']
 draft = false
+genre = 'note'
+audience = "Norns users, and anyone who enjoys a good production bug."
 +++
 
 [Norns v0.3](https://github.com/nornscode/norns/releases/tag/v0.3) is

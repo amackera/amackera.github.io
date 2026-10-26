@@ -1,0 +1,16 @@
+{{- /* A post as a card: optional thumbnail, date, title, description.
+       Pass a Page. Used on the homepage, the posts list, and the 404 page. */ -}}
+{{- $thumb := "" -}}
+{{- if site.Params.cardThumbs | default true }}{{ $thumb = partialCached "thumb.html" . .RelPermalink }}{{ end -}}
+<article class="card">
+  {{- with $thumb }}
+  <a class="card-thumb" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+  </a>
+  {{- end }}
+  <div class="card-body">
+    <p class="card-meta"><span class="card-date">{{ .Date.Format "Jan 2006" }}</span></p>
+    <p class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+    {{- with .Description }}<p class="card-desc">{{ . | markdownify }}</p>{{ end }}
+  </div>
+</article>

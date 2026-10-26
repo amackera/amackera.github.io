@@ -2,7 +2,8 @@
 title: "Don't Try"
 date: 2025-06-21
 draft: false
-description: "On Bukowski's epitaph, why half-assing teaches nothing, and why real effort is its own validation."
+description: "Bukowski's wisdom regarding effort, validation, and half-assing things on purpose."
+genre: "essay"
 ---
 
 On Charles Bukowski's gravestone is inscribed the epitaph "Don't

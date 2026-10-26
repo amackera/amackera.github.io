@@ -4,6 +4,7 @@ date = 2026-09-28T09:00:00-07:00
 draft = false
 description = "We've been building Missive, a correspondence app that delivers once a day, like the post. A few friends are testing it."
 series = 'missive'
+genre = 'note'
 +++
 
 For a long time now I've checked my personal inbox only a few times a

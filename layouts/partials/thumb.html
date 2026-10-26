@@ -1,0 +1,19 @@
+{{- /*
+  Thumbnail for a post card: the same image the post uses for its social card
+  (a hand-built one from `images` front matter, otherwise the auto-generated
+  OG card), cropped to 480x252 WebP. Returns an image resource or "".
+*/ -}}
+{{- $page := . -}}
+{{- $img := "" -}}
+{{- with $page.Params.images -}}
+  {{- $p := index . 0 -}}
+  {{- with $page.Resources.GetMatch (path.Base $p) }}{{ $img = . }}{{ end -}}
+  {{- if not $img }}{{ with resources.Get (strings.TrimPrefix "/" $p) }}{{ $img = . }}{{ end }}{{ end -}}
+{{- else -}}
+  {{- if and $page.IsPage (eq $page.Section "posts") -}}
+    {{- with partialCached "og/generate.html" $page $page.RelPermalink }}{{ $img = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $out := "" -}}
+{{- with $img }}{{ $out = .Fill "480x252 webp q85" }}{{ end -}}
+{{- return $out -}}

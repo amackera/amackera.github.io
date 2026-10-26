@@ -1,0 +1,22 @@
+{{- /* "Mentioned in": every other page whose markdown links to this one.
+       Matches "/posts/slug/" or "/posts/slug)" in the raw source, so a link
+       to a different post with a longer slug doesn't count. */ -}}
+{{- $self := . -}}
+{{- $a := .RelPermalink -}}
+{{- $b := printf "%s)" (strings.TrimSuffix "/" .RelPermalink) -}}
+{{- $hits := slice -}}
+{{- range site.RegularPages -}}
+  {{- if and (ne .RelPermalink $self.RelPermalink) (or (strings.Contains .RawContent $a) (strings.Contains .RawContent $b)) -}}
+    {{- $hits = $hits | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- with $hits }}
+<aside class="backlinks">
+  <p class="backlinks-label">Mentioned in</p>
+  <ul>
+    {{- range .ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }} <span class="backlinks-desc">{{ . | markdownify }}</span>{{ end }}</li>
+    {{- end }}
+  </ul>
+</aside>
+{{- end }}

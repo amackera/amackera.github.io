@@ -1,0 +1,34 @@
+# Projects, newest first. Drives the "Building" section on the homepage and
+# the {{< projects >}} shortcode on /projects. `post` is the announcement.
+
+[[project]]
+name = "Norns"
+url = "https://nornscode.com"
+blurb = "The runtime for long-lived agents. Built on Elixir."
+post = "/posts/introducing-norns/"
+# A project with a `series` gets a "Latest post" line on the homepage.
+series = "norns"
+
+[[project]]
+name = "Mimir"
+url = "https://nornscode.com/mimir"
+blurb = "A Slack bot that answers product questions. Built on Norns."
+post = "/posts/introducing-mimir/"
+
+[[project]]
+name = "Chronicle"
+url = "https://chronicle.work"
+blurb = "A shared history for recurring meetings."
+post = "/posts/introducing-chronicle/"
+
+[[project]]
+name = "Shotify"
+url = "https://shotify.codes"
+blurb = "Code screenshots from your editor."
+post = "/posts/introducing-shotify/"
+
+[[project]]
+name = "Float"
+url = "https://apps.apple.com/ca/app/float-meditation-timer/id6757253072"
+blurb = "A meditation timer for iOS."
+post = "/posts/float-meditation-timer/"

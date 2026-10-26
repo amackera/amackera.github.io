@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="list-container">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <div class="card-list">
+  {{- range .Pages.ByDate.Reverse }}
+    {{ partial "post-card.html" . }}
+  {{- end }}
+  </div>
+</div>
+{{ end }}

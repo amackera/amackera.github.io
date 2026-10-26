@@ -1,0 +1,7 @@
+{{- /* {{< projects >}} renders data/projects.toml, same list as the
+       homepage "Building" section. */ -}}
+<ul class="project-list">
+{{- range site.Data.projects.project }}
+  <li><a href="{{ .url }}">{{ .name }}</a>. {{ .blurb | markdownify }}{{ with .post }} <a class="quiet" href="{{ . }}">Read more</a>{{ end }}</li>
+{{- end }}
+</ul>

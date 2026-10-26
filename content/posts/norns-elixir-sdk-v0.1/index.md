@@ -6,6 +6,8 @@ description = "Norns' second SDK: an Elixir worker and client for building durab
 series = 'norns'
 seriesBlurb = "The second official SDK, for building durable agents on the BEAM."
 images = ['/posts/norns-elixir-sdk-v0.1/norns-elixir-sdk-v0.1-og.png']
+genre = 'note'
+audience = "Elixir developers who want to write durable agents without leaving the BEAM."
 +++
 
 The [Elixir SDK for Norns](https://github.com/nornscode/norns-sdk-elixir/releases/tag/v0.1.0)

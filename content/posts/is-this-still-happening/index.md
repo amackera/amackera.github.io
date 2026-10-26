@@ -5,6 +5,8 @@ description = "Norns' crash recovery re-dispatched pending sub-agent launches, f
 series = 'norns'
 seriesBlurb = "Crash recovery was forking sub-agent work instead of reattaching to it. Fixed and shipped in v0.4."
 draft = false
+genre = 'note'
+audience = "People who build or run agent runtimes, and anyone who's watched a retry turn into a duplicate."
 +++
 
 [Norns](https://github.com/nornscode/norns) is a durable agent

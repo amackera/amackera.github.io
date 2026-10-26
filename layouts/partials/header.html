@@ -1,0 +1,11 @@
+{{- /* Overrides the theme header: wordmark and menu on one row, serif
+       instead of mono, no leading slashes on the menu items. */ -}}
+<div class="header">
+  <p class="header-title"><a href="{{ site.BaseURL }}">{{ site.Title }}</a></p>
+  <nav class="header-menu">
+    {{- $cur := lower .Name }}
+    {{- range site.Params.menu }}
+    <a class="{{ if eq .name $cur }}current{{ end }}" href="{{ .url }}">{{ .name }}</a>
+    {{- end }}
+  </nav>
+</div>

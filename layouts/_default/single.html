@@ -1,0 +1,70 @@
+{{ define "main" }}
+{{- /* Overrides the theme's single.html. Adds a kind label above the title,
+       the description as a standfirst, written/updated dates, an optional
+       "Assumed audience" box (`audience` front matter), and a "Mentioned in"
+       list before the previous/next links. */ -}}
+<div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
+  <article>
+    <header class="single-intro-container">
+      {{- with partial "kind-label.html" . }}<p class="single-kind">{{ . }}</p>{{ end }}
+      <h1 class="single-title">{{ .Title }}</h1>
+      {{- with .Description }}
+      <p class="single-summary">{{ . | markdownify }}</p>
+      {{- end }}
+      {{- with .Date }}
+      <p class="single-date">
+        <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+        {{- with $.Params.lastmod }}{{ $m := time . }}{{ if ne ($m.Format "2006-01-02") ($.Date.Format "2006-01-02") }} · Updated <time datetime="{{ $m.Format "2006-01-02" }}">{{ $m.Format "January 2, 2006" }}</time>{{ end }}{{ end }}
+      </p>
+      {{- end }}
+    </header>
+
+    {{- with .Params.audience }}
+    <aside class="audience">
+      <p><span class="audience-label">Assumed audience</span> {{ . | markdownify }}</p>
+    </aside>
+    {{- end }}
+
+    {{- if .Param "toc" }}
+      <aside class="toc">
+        <p><strong>Table of contents</strong></p>
+        {{ .TableOfContents }}
+      </aside>
+    {{- end }}
+
+    <div class="single-content">
+      {{ .Content }}
+    </div>
+  </article>
+
+  {{- if and .Site.Params.giscus.enable (not .Params.disableComment) }}
+    <div class="single-comments">
+      {{ partial "comments.html" . }}
+    </div>
+  {{- end }}
+
+  {{ if .Store.Get "hasMermaid" }}
+  {{ $mermaidDarkTheme := default "dark" (or .Params.mermaidDarkTheme .Site.Params.mermaidDarkTheme) }}
+  {{ $mermaidTheme := default "default" (or .Params.mermaidTheme .Site.Params.mermaidTheme) }}
+  <script defer
+    type="module"
+    id="mermaid_script"
+    data-light-theme="{{ $mermaidTheme }}"
+    data-dark-theme="{{ $mermaidDarkTheme }}"
+    src='{{ "js/mermaid.js" | relURL }}'>
+  </script>
+  {{ end }}
+
+  {{ partial "backlinks.html" . }}
+
+  {{ if not (.Param "hidePagination") }}
+  {{ partial "pagination-single.html" . }}
+  {{ end }}
+
+  {{ if not (.Param "hideBackToTop") }}
+  <div class="back-to-top">
+    <a href="#top">back to top</a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

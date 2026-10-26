@@ -16,6 +16,9 @@ faviconPath = "https://mackeracher.com"
 theme = 'auto'
 colorPalette = 'default'
 hideHeader = false
+# Post cards on the homepage and /posts reuse each post's social card as a
+# thumbnail. Set false to drop the pictures and keep text-only cards.
+cardThumbs = false
 
 # Breadcrumbs
 [params.breadcrumbs]
@@ -72,6 +75,10 @@ url = "/norns"
 [[params.menu]]
 name = "projects"
 url = "/projects"
+
+[[params.menu]]
+name = "now"
+url = "/now"
 
 [[params.menu]]
 name = "photos"
