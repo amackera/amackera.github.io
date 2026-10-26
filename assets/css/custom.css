@@ -262,15 +262,10 @@ article p,
 
 /* Note list and project list */
 
-.project-sub {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.9em;
-  color: var(--content-secondary);
-}
-
-.project-sub a {
-  color: var(--content-secondary);
+/* The list of shorter posts sits under the essay cards on the homepage. */
+.card-grid + .note-list {
+  margin-top: 3rem;
+  border-top: 1px solid var(--rule);
 }
 
 .note-list,

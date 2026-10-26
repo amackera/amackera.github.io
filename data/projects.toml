@@ -6,8 +6,6 @@ name = "Norns"
 url = "https://nornscode.com"
 blurb = "The runtime for long-lived agents. Built on Elixir."
 post = "/posts/introducing-norns/"
-# A project with a `series` gets a "Latest post" line on the homepage.
-series = "norns"
 
 [[project]]
 name = "Mimir"

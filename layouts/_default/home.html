@@ -31,17 +31,7 @@
     <p class="section-blurb">Things I've shipped. Simple on purpose.</p>
     <ul class="project-list">
       {{- range . }}
-      <li>
-        <a href="{{ .url }}">{{ .name }}</a>. {{ .blurb | markdownify }}{{ with .post }} <a class="quiet" href="{{ . }}">Read more</a>{{ end }}
-        {{- with .series }}
-        {{- $pages := (where site.RegularPages "Params.series" .).ByDate }}
-        {{- $meta := index site.Data.series . }}
-        {{- with $pages }}
-        {{- $latest := index .Reverse 0 }}
-        <span class="project-sub">Latest post: <a href="{{ $latest.RelPermalink }}">{{ $latest.Title }}</a>{{ with $meta }}{{ with .page }} · <a href="{{ . }}">The series</a>{{ end }}{{ end }}</span>
-        {{- end }}
-        {{- end }}
-      </li>
+      <li><a href="{{ .url }}">{{ .name }}</a>. {{ .blurb | markdownify }}{{ with .post }} <a class="quiet" href="{{ . }}">Read more</a>{{ end }}</li>
       {{- end }}
     </ul>
   </section>
