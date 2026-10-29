@@ -2,6 +2,8 @@ baseURL = 'https://mackeracher.com/'
 languageCode = 'en-us'
 title = 'Anson MacKeracher'
 theme = "typo"
+# Last-modified dates from git. Only the Now page shows one (showUpdated).
+enableGitInfo = true
 
 [module]
   [[module.imports]]
@@ -9,8 +11,6 @@ theme = "typo"
 
 [params]
 description = "Essays, projects, and the Norns series from Anson MacKeracher."
-# Last-modified dates from git. Only the Now page shows one (showUpdated).
-enableGitInfo = true
 paginationSize = 20
 faviconPath = "https://mackeracher.com"
 
