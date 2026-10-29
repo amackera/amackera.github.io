@@ -11,8 +11,8 @@ the teams that build them. I co-founded [LegalMate](https://legalmate.co)
 and spent four years as its CTO, ran engineering at [Ada](https://ada.cx)
 and [Mangrove Systems](https://mangrovesystems.com), and helped build
 [Hyper](https://callhyper.com), acquired by Motorola Solutions in 2026.
-Now I'm at [CoPlane](https://coplane.com), where I'm building AI agents
-to automate the enterprise back office. 911 call handling, legal
+Now I'm at [CoPlane](https://coplane.com), building agents to
+automate the enterprise back office. 911 call handling, legal
 automation, carbon accounting, finance operations, all software that
 isn't allowed to fail.
 
