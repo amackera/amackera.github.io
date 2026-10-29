@@ -45,9 +45,11 @@ want more control than the auto-generated headline + subtitle layout.
 ## Post front matter
 
 Beyond `title`, `date`, `description`, every post carries a `genre`: `essay`,
-`note`, or `project`. Only the homepage uses it: essays get cards, notes get a
-title list below them, and project posts are left to the Building section,
-which comes from `data/projects.toml`. It isn't shown anywhere. Don't call
+`note`, or `project` (`archetypes/posts.md` starts new posts as `note`). Only
+the homepage uses it: essays get cards, everything else gets a title list
+below them, except project posts, which are left to the Building section
+from `data/projects.toml`. It isn't shown anywhere. A post with no genre is
+treated as a note. Don't call
 this key `kind` or `type`: both are reserved by Hugo and 0.128 (the CI
 version) refuses `kind`.
 

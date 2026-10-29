@@ -1,7 +1,9 @@
 {{ define "main" }}
 {{- $posts := where site.RegularPages "Section" "posts" -}}
 {{- $essays := (where $posts "Params.genre" "essay").ByDate.Reverse -}}
-{{- $notes := (where $posts "Params.genre" "note").ByDate.Reverse -}}
+{{- /* Anything that isn't an essay or a project is listed as a note, so a
+       post without a genre still reaches the homepage. */ -}}
+{{- $notes := (where (where $posts "Params.genre" "!=" "essay") "Params.genre" "!=" "project").ByDate.Reverse -}}
 <div class="home">
   <div class="home-intro">
     {{ .Content }}
