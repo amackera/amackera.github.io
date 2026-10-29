@@ -8,7 +8,9 @@ theme = "typo"
     path = "github.com/divinerites/plausible-hugo"
 
 [params]
-description = "Personal webpage of Anson MacKeracher"
+description = "Essays, projects, and the Norns series from Anson MacKeracher."
+# Last-modified dates from git. Only the Now page shows one (showUpdated).
+enableGitInfo = true
 paginationSize = 20
 faviconPath = "https://mackeracher.com"
 
@@ -23,6 +25,11 @@ cardThumbs = false
 # Breadcrumbs
 [params.breadcrumbs]
 enabled = false
+
+# Social card for the homepage (see assets/og/README.md)
+[params.og]
+homeTitle = "Reliable systems under unreliable conditions"
+homeDescription = "Essays, projects, and the Norns series."
 
 # Plausible Analytics
 [params.plausible]
@@ -61,24 +68,24 @@ name = "home"
 url = "/"
 
 [[params.menu]]
-name = "cv"
-url = "/cv"
-
-[[params.menu]]
 name = "posts"
 url = "/posts"
-
-[[params.menu]]
-name = "norns"
-url = "/norns"
 
 [[params.menu]]
 name = "projects"
 url = "/projects"
 
 [[params.menu]]
+name = "norns"
+url = "/norns"
+
+[[params.menu]]
 name = "now"
 url = "/now"
+
+[[params.menu]]
+name = "cv"
+url = "/cv"
 
 [[params.menu]]
 name = "photos"

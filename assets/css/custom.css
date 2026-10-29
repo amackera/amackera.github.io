@@ -122,6 +122,22 @@ article p,
   color: var(--accent);
 }
 
+/* ---------- Footer ---------- */
+
+footer {
+  color: var(--content-secondary);
+  padding: 1rem 0 1.5rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  font-family: var(--font-body);
+  color: var(--content-secondary);
+}
+
 /* ---------- Homepage ---------- */
 
 .home-intro p:first-child {

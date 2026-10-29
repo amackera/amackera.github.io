@@ -56,6 +56,8 @@ Optional keys:
 - `audience`: one sentence shown in an "Assumed audience" box under the title.
 - `lastmod`: shown as "Updated <date>" next to the written date when it
   differs from `date`. Only set it for real revisions, not typo fixes.
+- `showUpdated = true`: show only the last git commit date (content/now.md
+  uses this, so editing it is all it takes to bump the date).
 - `series` / `seriesBlurb`: see data/series.toml.
 
 Every post page ends with a "Mentioned in" list, built at compile time from

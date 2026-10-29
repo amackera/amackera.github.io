@@ -37,9 +37,10 @@ Norns project's — see "Two brands" below before reaching for `template.html`.
    page, so the image is only generated once per build) — that's the only
    plumbing involved; nothing else needs to change per-post.
 
-Non-post pages (home, cv, projects, photos, the posts list) never get a
-generated card — the `og/image.html` partial only fires for pages in the
-`posts` section.
+The homepage gets a card too, from `params.og.homeTitle` and
+`params.og.homeDescription` in hugo.toml (the generator accepts a dict with
+`title`, `desc` and `slug` as well as a Page). Other non-post pages (cv,
+projects, photos, the posts list) never get one.
 
 ## Two brands
 

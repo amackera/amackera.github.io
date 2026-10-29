@@ -2,9 +2,12 @@
 title = 'Now'
 date = 2026-10-26T09:00:00-07:00
 description = "What I'm doing at the moment."
+# Show the last git commit date instead of the written date.
+showUpdated = true
 +++
 
-Updated October 2026. This is a [now page](https://nownownow.com/about).
+This is a [now page](https://nownownow.com/about). The date above is
+the last time I touched it.
 
 **Work.** I'm at [CoPlane](https://coplane.com), building AI agents
 for the enterprise back office. Most of my attention goes there.

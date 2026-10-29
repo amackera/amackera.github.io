@@ -6,10 +6,16 @@
   Param: a Page.
   Returns: an image resource (1200x630), or nil if required assets are missing.
 */ -}}
+{{- /* Accepts a Page, or a dict with "title", "desc" and "slug" for pages
+       that aren't posts (the homepage uses this). */ -}}
 {{- $page := . -}}
-{{- $title := $page.Title -}}
-{{- $desc := $page.Description -}}
-{{- if not $desc -}}{{- $desc = $page.Site.Params.description -}}{{- end -}}
+{{- $title := "" -}}{{- $desc := "" -}}{{- $slug := "" -}}
+{{- if reflect.IsMap $page -}}
+  {{- $title = $page.title -}}{{- $desc = $page.desc -}}{{- $slug = $page.slug -}}
+{{- else -}}
+  {{- $title = $page.Title -}}{{- $desc = $page.Description -}}{{- $slug = $page.File.ContentBaseName -}}
+{{- end -}}
+{{- if not $desc -}}{{- $desc = site.Params.description -}}{{- end -}}
 
 {{- $bg := resources.Get "og/bg.png" -}}
 {{- $fontHead := resources.Get "fonts/JetBrainsMono/JetBrainsMono-SemiBold.ttf" -}}
@@ -76,7 +82,6 @@
   {{- end -}}
 
   {{- $final := $img.Resize "1200x630" -}}
-  {{- $slug := $page.File.ContentBaseName -}}
   {{- $out = resources.Copy (printf "og/generated/%s-og.png" $slug) $final -}}
 {{- end -}}
 {{- return $out -}}

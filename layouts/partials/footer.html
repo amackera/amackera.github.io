@@ -1,0 +1,3 @@
+{{- /* Overrides the theme footer. */ -}}
+{{- $rss := "" }}{{ with site.GetPage "posts" }}{{ with .OutputFormats.Get "rss" }}{{ $rss = .RelPermalink }}{{ end }}{{ end }}
+<p>&copy; {{ now.Year }} {{ site.Title }}{{ with $rss }} · <a href="{{ . }}">RSS</a>{{ end }}</p>

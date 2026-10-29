@@ -11,12 +11,14 @@
       {{- with .Description }}
       <p class="single-summary">{{ . | markdownify }}</p>
       {{- end }}
-      {{- with .Date }}
+      {{- if .Params.showUpdated }}
+      <p class="single-date">Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time></p>
+      {{- else }}{{ with .Date }}
       <p class="single-date">
         <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
         {{- with $.Params.lastmod }}{{ $m := time . }}{{ if ne ($m.Format "2006-01-02") ($.Date.Format "2006-01-02") }} · Updated <time datetime="{{ $m.Format "2006-01-02" }}">{{ $m.Format "January 2, 2006" }}</time>{{ end }}{{ end }}
       </p>
-      {{- end }}
+      {{- end }}{{ end }}
     </header>
 
     {{- with .Params.audience }}

@@ -14,6 +14,10 @@
     {{- with partial "og/generate.html" $page -}}
       {{- $images = slice .RelPermalink -}}
     {{- end -}}
+  {{- else if $page.IsHome -}}
+    {{- with partial "og/generate.html" (dict "title" site.Params.og.homeTitle "desc" site.Params.og.homeDescription "slug" "home") -}}
+      {{- $images = slice .RelPermalink -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return $images -}}
