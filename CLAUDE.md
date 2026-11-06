@@ -63,8 +63,9 @@ Optional keys:
 - `series` / `seriesBlurb`: see data/series.toml.
 
 Every post page ends with a "Mentioned in" list, built at compile time from
-other pages whose markdown links to it (layouts/partials/backlinks.html).
+other pages whose markdown links to it (layouts/partials/backlinks.html),
+then series navigation and a follow line (layouts/partials/post-footer.html).
+There are no previous/next links.
 
-Card thumbnails on the homepage and /posts are the post's social card
-(layouts/partials/thumb.html), so a hand-built `images` card shows there too.
-`cardThumbs = false` in hugo.toml turns them off.
+There is no projects page. The project list lives only on the homepage, and
+`/projects/` redirects there (alias in content/_index.md).

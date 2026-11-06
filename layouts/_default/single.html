@@ -2,7 +2,7 @@
 {{- /* Overrides the theme's single.html. Adds a kind label above the title,
        the description as a standfirst, written/updated dates, an optional
        "Assumed audience" box (`audience` front matter), and a "Mentioned in"
-       list before the previous/next links. */ -}}
+       list. Ends with layouts/partials/post-footer.html. */ -}}
 <div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
   <article>
     <header class="single-intro-container">
@@ -59,14 +59,6 @@
 
   {{ partial "backlinks.html" . }}
 
-  {{ if not (.Param "hidePagination") }}
-  {{ partial "pagination-single.html" . }}
-  {{ end }}
-
-  {{ if not (.Param "hideBackToTop") }}
-  <div class="back-to-top">
-    <a href="#top">back to top</a>
-  </div>
-  {{ end }}
+  {{ partial "post-footer.html" . }}
 </div>
 {{ end }}

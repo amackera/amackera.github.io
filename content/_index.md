@@ -1,6 +1,8 @@
 ---
 date: 2024-09-18
 title: "Anson MacKeracher"
+# The projects page is gone; its list is the Building section here.
+aliases: ["/projects/"]
 ---
 
 I create software systems that operate reliably under unreliable
@@ -19,6 +21,4 @@ isn't allowed to fail.
 
 I studied Computer Engineering at the University of
 Waterloo, spent ten years in Toronto, and now live on Bowen Island,
-a short ferry ride from Vancouver. I've shipped production code in
-almost a dozen languages and built products used by millions. Full
-history on my [CV](/cv).
+a short ferry ride from Vancouver. Full history on my [CV](/cv).

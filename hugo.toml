@@ -18,9 +18,6 @@ faviconPath = "https://mackeracher.com"
 theme = 'auto'
 colorPalette = 'default'
 hideHeader = false
-# Post cards on the homepage and /posts reuse each post's social card as a
-# thumbnail. Set false to drop the pictures and keep text-only cards.
-cardThumbs = false
 
 # Breadcrumbs
 [params.breadcrumbs]
@@ -62,18 +59,10 @@ url = "https://bsky.app/profile/amackera.bsky.social"
 name = "Email"
 url = "mailto:anson@mackeracher.com"
 
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
+# Main menu pages. The name above the menu links home.
 [[params.menu]]
 name = "posts"
 url = "/posts"
-
-[[params.menu]]
-name = "projects"
-url = "/projects"
 
 [[params.menu]]
 name = "norns"

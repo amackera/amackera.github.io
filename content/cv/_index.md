@@ -25,11 +25,7 @@ ___Engineering___, Sept 2025 - Oct 2026
 
 - Co-inventor of a state-of-the-art, patent-pending computer-use AI system
 - Running 24/7 in production with some of North America's busiest PSAPs
-- AI Engineering and deployment of agentic call handling solution
 - Leading a team of exceptional Elixir and Python engineers
-- Overseeing security and compliance, including SOC2
-- Recruiting, performance management, strategy, and culture of engineering
-- IT operations and cloud infrastructure (Azure, AWS, LiveKit)
 - Elixir, Python, PostgreSQL
 
 ### [Mangrove Systems](https://mangrovesystems.com)
@@ -40,8 +36,6 @@ ___Head of Engineering___, Nov 2024 - Sep 2025
 
 - Led a high performing team of Ruby and JavaScript developers
 - Responsible for security and compliance, including SOC2
-- Recruiting, performance management, strategy, and culture of engineering
-- IT operations and cloud infrastructure (Heroku, Azure, AWS)
 - Public API design and development, 3rd party integrations
 - Ruby on Rails, JavaScript, PostgreSQL
 
@@ -64,7 +58,6 @@ ___Head of Engineering___, Dec 2017 - Sep 2020
 
 - Led a team of world-class software developers and data scientists
 - Achieved SOC2 Type 1 compliance, PCI-DSS Level 2 compliance
-- Responsible for planning, hiring, performance, strategy, vision, and culture of engineering team
 - Large-scale data processing for analytics, ML labeling and training
 - Online ML models for text classification, summarization, word embeddings
 - Python, JavaScript, MongoDB, AWS

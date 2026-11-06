@@ -1,0 +1,10 @@
+{{- /* End of a post: series navigation (if any) and a short follow-along
+       line. */ -}}
+{{ partial "series-nav.html" . }}
+
+{{- $rss := "" }}{{ with site.GetPage "posts" }}{{ with .OutputFormats.Get "rss" }}{{ $rss = .RelPermalink }}{{ end }}{{ end }}
+{{- $mail := "" }}{{ range site.Params.social }}{{ if eq .name "Email" }}{{ $mail = .url }}{{ end }}{{ end }}
+<p class="follow-line">
+  I post about once a month.
+  {{ if $rss }}Follow along by <a href="{{ $rss }}">RSS</a>{{ if $mail }}, or {{ end }}{{ end }}{{ with $mail }}<a href="{{ . }}">email me</a>{{ end }}.
+</p>

@@ -1,5 +1,5 @@
-# Projects, newest first. Drives the "Building" section on the homepage and
-# the {{< projects >}} shortcode on /projects. `post` is the announcement.
+# Projects, newest first. Drives the "Building" section on the homepage.
+# `post` is the announcement.
 
 [[project]]
 name = "Norns"

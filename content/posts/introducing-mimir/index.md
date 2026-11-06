@@ -7,7 +7,6 @@ seriesBlurb = "The first reference agent, a Slack bot with persistent memory, an
 images = ['/posts/introducing-mimir/event-log.png']
 draft = false
 genre = 'project'
-audience = "People running agents in production, or about to. Assumes you've read the Norns intro."
 +++
 
 [Mimir](https://nornscode.com/mimir) is a Slack bot that answers

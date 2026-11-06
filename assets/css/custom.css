@@ -183,9 +183,8 @@ footer a {
   gap: 2rem 2.5rem;
 }
 
-/* Text-only cards (cardThumbs = false) get a hairline on top so the grid
-   still reads as a grid. */
-.card-grid .card:not(:has(.card-thumb)) {
+/* A hairline on top of each card so the grid reads as a grid. */
+.card-grid .card {
   border-top: 1px solid var(--rule);
   padding-top: 1rem;
 }
@@ -195,43 +194,6 @@ footer a {
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
-}
-
-.card-list .card {
-  display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.card-list .card:not(:has(.card-thumb)) {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.card-thumb {
-  display: block;
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--code-background);
-  border: 1px solid var(--rule);
-  margin-bottom: 0.9rem;
-}
-
-.card-list .card-thumb {
-  margin-bottom: 0;
-}
-
-.card-thumb img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 480 / 252;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-thumb img {
-  transform: scale(1.02);
 }
 
 .card p {
@@ -409,15 +371,6 @@ footer a {
 
   .card-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .card-list .card {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-  }
-
-  .card-list .card-thumb {
-    max-width: 320px;
   }
 
   .single-title {

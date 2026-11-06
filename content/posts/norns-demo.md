@@ -6,7 +6,6 @@ series = 'norns'
 seriesBlurb = "A 30-second demo. The worker dies twice and the agent finishes the job anyway."
 draft = false
 genre = 'note'
-audience = "Anyone who'd rather watch Norns recover from a crash than read about it. Thirty seconds."
 +++
 
 Last week, I [introduced Norns](/posts/introducing-norns/). Here's a

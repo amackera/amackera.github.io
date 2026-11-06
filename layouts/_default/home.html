@@ -29,8 +29,7 @@
 
   {{- with site.Data.projects.project }}
   <section class="home-section">
-    <h2><a href="/projects/">Building</a></h2>
-    <p class="section-blurb">Things I've shipped. Simple on purpose.</p>
+    <h2>Building</h2>
     <ul class="project-list">
       {{- range . }}
       <li><a href="{{ .url }}">{{ .name }}</a>. {{ .blurb | markdownify }}{{ with .post }} <a class="quiet" href="{{ . }}">Read more</a>{{ end }}</li>
@@ -44,7 +43,8 @@
     <p>The best way to reach me is by <a href="{{ $mail }}">email</a>.</p>
     {{ with site.Params.social }}
     <div class="social-icons">
-      {{- range . }}
+      {{- /* Email is the line above, so it gets no icon. */ -}}
+      {{- range where . "name" "ne" "Email" }}
       <a href="{{ trim .url " " | safeURL }}" target="_blank"
          rel="noopener noreferrer me"
          title="{{ (.title | default .name) | title }}">

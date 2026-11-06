@@ -6,7 +6,6 @@ description: "Why AI for 911, software for legal proceedings, and financial oper
 series: norns
 seriesBlurb: "Why 911 calls and legal cases need durable execution, and the lineage from journaling file systems to Temporal."
 genre: "essay"
-audience: "Anyone putting an LLM in front of real users. No Elixir and no Norns internals, mostly history."
 ---
 
 At [Hyper](https://callhyper.com), we're building voice agents that
