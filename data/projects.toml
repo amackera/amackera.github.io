@@ -14,18 +14,6 @@ blurb = "A Slack bot that answers product questions. Built on Norns."
 post = "/posts/introducing-mimir/"
 
 [[project]]
-name = "Chronicle"
-url = "https://chronicle.work"
-blurb = "A shared history for recurring meetings."
-post = "/posts/introducing-chronicle/"
-
-[[project]]
-name = "Shotify"
-url = "https://shotify.codes"
-blurb = "Code screenshots from your editor."
-post = "/posts/introducing-shotify/"
-
-[[project]]
 name = "Float"
 url = "https://apps.apple.com/ca/app/float-meditation-timer/id6757253072"
 blurb = "A meditation timer for iOS."
