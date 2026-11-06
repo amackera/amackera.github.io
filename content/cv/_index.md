@@ -58,7 +58,7 @@ ___Co-Founder & CTO___, Nov 2020 - Sep 2024
 
 ### [Ada](https://ada.cx)
 
-_AI-powered customer service automation platform_
+_AI-powered customer service automation platform. [Combining with Dialpad](https://www.ada.cx/full-stack-with-dialpad/), announced November 2026._
 
 ___Head of Engineering___, Dec 2017 - Sep 2020
 
